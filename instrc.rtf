@@ -1,0 +1,530 @@
+{\rtf1\fbidis\ansi\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset1 Segoe UI Symbol;}{\f2\fnil Calibri;}{\f3\fnil\fcharset1 Segoe UI Emoji;}{\f4\fnil\fcharset1 Segoe UI Symbol;}{\f5\fnil\fcharset1 Cambria Math;}{\f6\fnil\fcharset177 Calibri;}}
+{\*\generator Riched20 10.0.22621}{\*\mmathPr\mmathFont5\mwrapIndent1440 }\viewkind4\uc1 
+\pard\ltrpar\sa200\sl276\slmult1\f0\fs22\lang9 # \f1\u-10178?\u-8873?\f2  \f0 Bari Bali Salad Builder - Grok Build Instructions\par
+\par
+## \f1\u-10179?\u-9013?\f2  \f0 Overview\par
+Build a **premium, dense, game-like mobile salad builder** with live nutrition tracking. Think: Duolingo meets food ordering.\par
+\par
+---\par
+\par
+## \f1\u-10180?\u-8280?\f2  \f0 CRITICAL VISUAL REQUIREMENTS\par
+\par
+### **Density & Spacing**\par
+- **8px base grid** - everything aligns to 4/8/12/16px\par
+- **Compact typography**: 13px body, 15px headings, line-height 1.2\par
+- **Zero wasted space**: tight padding (4-8px), minimal gaps\par
+- **3-column chip grid** on mobile, scrollable if needed\par
+- **44px minimum touch targets** (Apple guideline)\par
+\par
+### **Visual Style: "Premium Mobile Game"**\par
+```css\par
+/* Core aesthetic */\par
+- Glassmorphism cards: backdrop-blur-md, rgba(255,255,255,0.92)\par
+- Subtle shadows: 0 2px 8px rgba(10,61,46,0.08)\par
+- Gradient accents on selected chips\par
+- Smooth 150-200ms transitions\par
+- Category-based color coding (see below)\par
+```\par
+\par
+### **Color System**\par
+```typescript\par
+// Brand colors\par
+primary: '#5AC568'      // Green - veggies, success\par
+accent: '#FFD93B'       // Lemon - energy, premium\par
+ink: '#0A3D2E'          // Text (dark green)\par
+bg: '#FAFAF5'           // Base (cream)\par
+glass: 'rgba(255,255,255,0.92)'\par
+\par
+// Category colors (for chips)\par
+veggies: 'linear-gradient(135deg, #5AC568 0%, #4DB858 100%)'\par
+proteins: 'linear-gradient(135deg, #4299E1 0%, #3182CE 100%)'\par
+grains: 'linear-gradient(135deg, #F6AD55 0%, #DD6B20 100%)'\par
+sauces: 'linear-gradient(135deg, #9F7AEA 0%, #805AD5 100%)'\par
+paid: 'linear-gradient(135deg, #FFD93B 0%, #F6B93B 100%)'\par
+```\par
+\par
+---\par
+\par
+## \f3\u-10180?\u-8233?\u-497?\f2  \f0 LAYOUT STRUCTURE\par
+\par
+```\par
+\f4\u9484?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9488?\f0\par
+\f4\u9474?\f2  \f0 Header (sticky, 48px)               \f4\u9474?\f2  \f0\par
+\f4\u9474?\f2  \f4\u9500?\u9472?\f2  \f0 Logo + Title                    \f4\u9474?\f0\par
+\f4\u9474?\f2  \f4\u9492?\u9472?\f2  \f0 Size selector (750/1000/1500)   \f4\u9474?\f0\par
+\f4\u9500?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9508?\f0\par
+\f4\u9474?\f2  \f0 Bowl Canvas (sticky, 180px)         \f4\u9474?\f2  \f5\u8592?\f2  \f0 ALWAYS VISIBLE\par
+\f4\u9474?\f2  \f4\u9500?\u9472?\f2  \f0 Gradient donut ring (kcal)      \f4\u9474?\f0\par
+\f4\u9474?\f2  \f4\u9500?\u9472?\f2  \f0 Tri-bars overlay (P/C/F)        \f4\u9474?\f0\par
+\f4\u9474?\f2  \f4\u9492?\u9472?\f2  \f0 Item count badge                \f4\u9474?\f0\par
+\f4\u9500?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9508?\f0\par
+\f4\u9474?\f2  \f0 Category Tabs (horizontal scroll)   \f4\u9474?\f0\par
+\f4\u9474?\f2  \f4\u9492?\u9472?\f2  \f0 Veggies \f2\bullet  Sauces \bullet  Extras \bullet  Mix \f4\u9474?\f0\par
+\f4\u9500?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9508?\f0\par
+\f4\u9474?\f2  \f0 Ingredient Grid (3 cols, scroll)    \f4\u9474?\f0\par
+\f4\u9474?\f2  \f4\u9500?\u9472?\f2  \f0 Gradient chips (44px)           \f4\u9474?\f0\par
+\f4\u9474?\f2  \f4\u9500?\u9472?\f2  \f0 Icons (emoji or Iconify)        \f4\u9474?\f0\par
+\f4\u9474?\f2  \f4\u9500?\u9472?\f2  \f0 Price deltas inline             \f4\u9474?\f0\par
+\f4\u9474?\f2  \f4\u9492?\u9472?\f2  \f0 Selection checkmark             \f4\u9474?\f0\par
+\f4\u9500?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9508?\f0\par
+\f4\u9474?\f2  \f0 Bottom Bar (sticky, 64px)           \f4\u9474?\f0\par
+\f4\u9474?\f2  \f4\u9500?\u9472?\f2  \f0 Price total (left)              \f4\u9474?\f0\par
+\f4\u9474?\f2  \f4\u9492?\u9472?\f2  \f0 Continue CTA (right)            \f4\u9474?\f0\par
+\f4\u9492?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9496?\f0\par
+```\par
+\par
+**Key Layout Rules:**\par
+1. Bowl is **always visible** (sticky top after header)\par
+2. Category tabs scroll horizontally if needed\par
+3. Ingredient grid is 3 columns, fills remaining height\par
+4. Bottom bar always visible for checkout\par
+\par
+---\par
+\par
+## \f1\u-10180?\u-8273?\f2  \f0 COMPONENT SPECIFICATIONS\par
+\par
+### **1. Bowl Canvas (The Star of the Show)**\par
+\par
+```typescript\par
+BowlCanvas Component:\par
+- Size: 180px diameter circle\par
+- Position: sticky top-[48px]\par
+- Background: subtle radial gradient\par
+\par
+Visual elements:\par
+1. Outer ring: Kcal progress donut\par
+   - Stroke: 8px\par
+   - Color: gradient from lemon to green based on %\par
+   - Animated on value change\par
+   \par
+2. Inner content:\par
+   - Center: \{kcal\} / \{target\} display\par
+   - 3 mini bars below for P/C/F (horizontal, 40px wide)\par
+   \par
+3. Item count badge (top-right):\par
+   - Shows total items selected\par
+   - Pulses on change\par
+\par
+Animation:\par
+- Donut fills clockwise\par
+- Numbers count up smoothly\par
+- Pulse effect on update (scale 1.05 for 200ms)\par
+```\par
+\par
+### **2. Ingredient Chip**\par
+\par
+```typescript\par
+IngredientChip Design:\par
+- Height: 44px (fixed)\par
+- Padding: 8px 12px\par
+- Border-radius: 10px\par
+- Font: 13px medium\par
+\par
+States:\par
+1. Default: white bg, gray border, category icon\par
+2. Selected: category gradient + white text + checkmark\par
+3. Disabled: 40% opacity, no-drop cursor\par
+4. Premium: gold border glow (box-shadow)\par
+\par
+Layout: [Icon 20px] [Label] [Price] [Checkmark]\par
+\par
+Hover/Tap:\par
+- Scale to 0.97 for 120ms\par
+- Optional: tiny "plop" sound effect\par
+```\par
+\par
+**Category Styling:**\par
+```css\par
+/* Apply gradient based on category */\par
+.chip-veggies.selected \{\par
+  background: linear-gradient(135deg, #5AC568 0%, #4DB858 100%);\par
+\}\par
+.chip-proteins.selected \{\par
+  background: linear-gradient(135deg, #4299E1 0%, #3182CE 100%);\par
+\}\par
+.chip-grains.selected \{\par
+  background: linear-gradient(135deg, #F6AD55 0%, #DD6B20 100%);\par
+\}\par
+.chip-sauces.selected \{\par
+  background: linear-gradient(135deg, #9F7AEA 0%, #805AD5 100%);\par
+\}\par
+.chip-paid.selected \{\par
+  background: linear-gradient(135deg, #FFD93B 0%, #F6B93B 100%);\par
+  box-shadow: 0 0 0 2px #FFD93B40; /* gold glow */\par
+\}\par
+```\par
+\par
+### **3. Nutrition Pop**\par
+\par
+```typescript\par
+NutritionPop:\par
+- Position: fixed, top-24, centered\par
+- Size: auto-width, 32px height\par
+- Style: glassmorphism pill with shadow\par
+- Animation: slide down + fade in (200ms)\par
+- Duration: show for 1.5s, then fade out\par
+- Throttle: minimum 1.5s between pops\par
+\par
+Content: Single nutrition fact (e.g., "\f6\rtlch\lang1037\'f2\'f9\'e9\'f8 \'e1\'e7\'ec\'e1\'e5\'ef\f2\ltrch  \f1\u-10179?\u-9046?\f0\lang1033 ")\par
+```\par
+\par
+### **4. Category Tabs**\par
+\par
+```typescript\par
+Tabs Design:\par
+- Horizontal scroll (overflow-x-auto)\par
+- Height: 40px\par
+- Gap: 8px between tabs\par
+- Snap scroll on mobile\par
+\par
+Each tab:\par
+- Padding: 8px 16px\par
+- Border-radius: 20px (pill shape)\par
+- Active: green bg + white text\par
+- Inactive: white bg + ink text\par
+- Badge: show count (e.g., "3/12")\par
+```\par
+\par
+---\par
+\par
+## \f1\u-10179?\u-9014?\f2  \f0 DATA & LOGIC\par
+\par
+### **Menu Structure (JSON)**\par
+\par
+```typescript\par
+// Use this exact structure:\par
+\{\par
+  "sizes": [\par
+    \{ "id": "750", "base_price": 54, "veg_min": 4, "veg_max": 12, "target_kcal": 500 \},\par
+    \{ "id": "1000", "base_price": 62, "veg_min": 4, "veg_max": 14, "target_kcal": 650 \},\par
+    \{ "id": "1500", "base_price": null, "veg_min": 4, "veg_max": 16, "target_kcal": 800 \}\par
+  ],\par
+  "veggies": [\par
+    \{\par
+      "id": "lettuce",\par
+      "he": "\f6\rtlch\lang1037\'e7\'f1\'e4\f0\ltrch\lang1033 ",\par
+      "icon": "\f3\lang1037\u-10178?\u-8852?\f0\lang1033 ",\par
+      "category": "veggies",\par
+      "nutrition": \{\par
+        "grams_per_scoop": 30,\par
+        "per_100g": \{ "kcal": 15, "protein": 1.4, "carbs": 2.9, "fat": 0.2 \}\par
+      \},\par
+      "facts": [\{ "he": "\f6\rtlch\lang1037\'f2\'f9\'e9\'f8\'e4 \'e1\'f1\'e9\'e1\'e9\'ed \'fa\'e6\'e5\'f0\'fa\'e9\'e9\'ed\f0\ltrch\lang1033 " \}]\par
+    \}\par
+    // ... more items\par
+  ],\par
+  "sauces": [ /* min \f6\rtlch\lang1037 1\f0\ltrch\lang1033 , max \f6\rtlch\lang1037 10\f0\ltrch\lang1033 , first \f6\rtlch\lang1037 3 \f0\ltrch\lang1033 free, then \f6\rtlch\lang1037 2\'a4 \f0\ltrch\lang1033 each */ ],\par
+  "primary_extra": [ /* up to \f6\rtlch\lang1037 1\f0\ltrch\lang1033 , included in base price */ ],\par
+  "paid_additions": [ /* up to \f6\rtlch\lang1037 5\f0\ltrch\lang1033 , unit prices */ ],\par
+  "side": [ /* exact \f6\rtlch\lang1037 1 \f0\ltrch\lang1033 (bread/croutons/none) */ ],\par
+  "mixing": [ /* exact \f6\rtlch\lang1037 1 \f0\ltrch\lang1033 (mix/no-mix) */ ]\par
+\}\par
+```\par
+\par
+### **Nutrition Calculation**\par
+\par
+```typescript\par
+function calculateNutrition(selected, menu) \{\par
+  let totals = \{ kcal: \f6\rtlch\lang1037 0\f0\ltrch\lang1033 , protein: \f6\rtlch\lang1037 0\f0\ltrch\lang1033 , carbs: \f6\rtlch\lang1037 0\f0\ltrch\lang1033 , fat: \f6\rtlch\lang1037 0 \f0\ltrch\lang1033\};\par
+  \par
+  // For each selected item:\par
+  const grams = item.nutrition.grams_per_scoop;\par
+  const per\f6\rtlch\lang1037 100 \f0\ltrch\lang1033 = item.nutrition.per_\f6\rtlch\lang1037 100\f0\ltrch\lang1033 g;\par
+  const factor = grams / \f6\rtlch\lang1037 100\f0\ltrch\lang1033 ;\par
+  \par
+  totals.kcal += per\f6\rtlch\lang1037 100\f0\ltrch\lang1033 .kcal * factor;\par
+  totals.protein += per\f6\rtlch\lang1037 100\f0\ltrch\lang1033 .protein * factor;\par
+  // ... same for carbs, fat\par
+  \par
+  return \{\par
+    kcal: Math.round(totals.kcal),\par
+    protein: Math.round(totals.protein * \f6\rtlch\lang1037 10\f0\ltrch\lang1033 ) / \f6\rtlch\lang1037 10\f0\ltrch\lang1033 ,\par
+    carbs: Math.round(totals.carbs * \f6\rtlch\lang1037 10\f0\ltrch\lang1033 ) / \f6\rtlch\lang1037 10\f0\ltrch\lang1033 ,\par
+    fat: Math.round(totals.fat * \f6\rtlch\lang1037 10\f0\ltrch\lang1033 ) / \f6\rtlch\lang1037 10\f0\ltrch\lang1033\par
+  \};\par
+\}\par
+```\par
+\par
+### **Price Calculation**\par
+\par
+```typescript\par
+function calculatePrice(selected, size, menu) \{\par
+  let total = size.base_price;\par
+  \par
+  // Add veggie price deltas\par
+  selected.veggies.forEach(id => \{\par
+    const item = menu.veggies.find(v => v.id === id);\par
+    if (item?.price_delta) total += item.price_delta;\par
+  \});\par
+  \par
+  // Sauce pricing: first \f6\rtlch\lang1037 3 \f0\ltrch\lang1033 free, then \f6\rtlch\lang1037 2\'a4 \f0\ltrch\lang1033 each\par
+  const paidSauces = Math.max(\f6\rtlch\lang1037 0\f0\ltrch\lang1033 , selected.sauces.size - \f6\rtlch\lang1037 3\f0\ltrch\lang1033 );\par
+  total += paidSauces * \f6\rtlch\lang1037 2\f0\ltrch\lang1033 ;\par
+  \par
+  // Paid additions\par
+  selected.paid_additions.forEach(id => \{\par
+    const item = menu.paid_additions.find(p => p.id === id);\par
+    if (item) total += item.unit_price;\par
+  \});\par
+  \par
+  return total;\par
+\}\par
+```\par
+\par
+### **Selection Rules**\par
+\par
+```typescript\par
+// Veggies: min/max based on size\par
+if (selected.veggies.size >= size.veg_max) \{\par
+  // Disable remaining veggie chips\par
+\}\par
+\par
+// Sauces: min \f6\rtlch\lang1037 1\f0\ltrch\lang1033 , max \f6\rtlch\lang1037 10\f0\ltrch\lang1033\par
+if (selected.sauces.size >= \f6\rtlch\lang1037 10\f0\ltrch\lang1033 ) \{\par
+  // Disable remaining sauce chips\par
+\}\par
+\par
+// Primary extra: exactly \f6\rtlch\lang1037 0 \f0\ltrch\lang1033 or \f6\rtlch\lang1037 1\f0\ltrch\lang1033\par
+// Paid additions: max \f6\rtlch\lang1037 5\f0\ltrch\lang1033\par
+// Side: exactly \f6\rtlch\lang1037 1 \f0\ltrch\lang1033 (default "none")\par
+// Mixing: exactly \f6\rtlch\lang1037 1 \f0\ltrch\lang1033 (default "mix")\par
+```\par
+\par
+---\par
+\par
+## \f1\lang1037\u-10180?\u-8276?\f2\lang1033  \f0 MICRO-INTERACTIONS\par
+\par
+### **Required Animations**\par
+\par
+1. **Chip tap:**\par
+   - Scale to 0.97 for 120ms\par
+   - Background color transition 150ms\par
+   - Optional: subtle "plop" sound\par
+\par
+2. **Bowl update:**\par
+   - Donut ring animates to new value (300ms ease)\par
+   - Numbers count up smoothly (use react-countup or similar)\par
+   - Pulse effect: scale 1.05 for 200ms\par
+\par
+3. **Nutrition pop:**\par
+   - Slide down from top + fade in (200ms)\par
+   - Hold for 1.5s\par
+   - Fade out (200ms)\par
+\par
+4. **Category tab switch:**\par
+   - Smooth scroll into view\par
+   - Fade in new grid (150ms)\par
+\par
+5. **Page transitions:**\par
+   - Size change: fade bowl + grid (200ms)\par
+   - No jarring layout shifts\par
+\par
+### **Performance**\par
+- Use `transform` and `opacity` only (GPU-accelerated)\par
+- Avoid animating `width`, `height`, `top`, `left`\par
+- Memoize expensive calculations\par
+- Debounce nutrition updates if needed\par
+\par
+---\par
+\par
+## \f3\u-10179?\u-8480?\u-497?\f2  \f0 TECH STACK\par
+\par
+```json\par
+\{\par
+  "framework": "Next.js 14 (App Router)",\par
+  "language": "TypeScript",\par
+  "styling": "Tailwind CSS + inline styles for gradients",\par
+  "state": "React useState/useMemo (Zustand optional)",\par
+  "icons": "Emoji (or Iconify React if you want)",\par
+  "animations": "CSS transitions + Framer Motion (minimal)",\par
+  "audio": "Howler.js (optional for SFX)"\par
+\}\par
+```\par
+\par
+### **File Structure**\par
+\par
+```\par
+src/\par
+\f4\u9500?\u9472?\u9472?\f2  \f0 app/\par
+\f4\u9474?\f2    \f4\u9500?\u9472?\u9472?\f2  \f0 page.tsx                 # Main builder page\par
+\f4\u9474?\f2    \f4\u9500?\u9472?\u9472?\f2  \f0 layout.tsx               # Root layout\par
+\f4\u9474?\f2    \f4\u9492?\u9472?\u9472?\f2  \f0 globals.css              # Tailwind config\par
+\f4\u9500?\u9472?\u9472?\f2  \f0 components/\par
+\f4\u9474?\f2    \f4\u9500?\u9472?\u9472?\f2  \f0 BowlCanvas.tsx           # Main bowl visualization\par
+\f4\u9474?\f2    \f4\u9500?\u9472?\u9472?\f2  \f0 IngredientChip.tsx       # Individual ingredient chip\par
+\f4\u9474?\f2    \f4\u9500?\u9472?\u9472?\f2  \f0 NutritionHUD.tsx         # Compact nutrition display\par
+\f4\u9474?\f2    \f4\u9500?\u9472?\u9472?\f2  \f0 NutritionPop.tsx         # Tooltip pop-up\par
+\f4\u9474?\f2    \f4\u9500?\u9472?\u9472?\f2  \f0 CategoryTabs.tsx         # Horizontal tab bar\par
+\f4\u9474?\f2    \f4\u9492?\u9472?\u9472?\f2  \f0 BottomBar.tsx            # Sticky checkout bar\par
+\f4\u9500?\u9472?\u9472?\f2  \f0 lib/\par
+\f4\u9474?\f2    \f4\u9500?\u9472?\u9472?\f2  \f0 menu.json                # Menu data\par
+\f4\u9474?\f2    \f4\u9500?\u9472?\u9472?\f2  \f0 nutrition.ts             # Calculation logic\par
+\f4\u9474?\f2    \f4\u9492?\u9472?\u9472?\f2  \f0 utils.ts                 # Helpers\par
+\f4\u9492?\u9472?\u9472?\f2  \f0 types/\par
+\f2     \f4\u9492?\u9472?\u9472?\f2  \f0 index.ts                 # TypeScript types\par
+```\par
+\par
+---\par
+\par
+## \f1\u-10180?\u-8273?\f2  \f0 GROK PROMPT\par
+\par
+Copy-paste this to Grok in VSCode:\par
+\par
+```\par
+Build a premium mobile salad builder with these EXACT specs:\par
+\par
+LAYOUT:\par
+- Sticky header (48px): logo + size selector (750/1000/1500ml)\par
+- Sticky bowl canvas (180px): gradient donut ring showing kcal progress + tri-bars for P/C/F\par
+- Horizontal category tabs: Veggies \f2\bullet  Sauces \bullet  Extras \bullet  Options\par
+- 3-column ingredient grid (44px chips)\par
+- Sticky bottom bar: price + "Continue" CTA\par
+\par
+VISUAL STYLE:\par
+- Dense 8px grid spacing (4/8/12/16px padding)\par
+- Glassmorphism: backdrop-blur-md, rgba(255,255,255,0.92)\par
+- Category gradients: veggies=green, proteins=blue, grains=orange, sauces=purple\par
+- Selected chips get gradient background + white text + checkmark\par
+- Premium items (price_delta or unit_price) get gold glow\par
+- Typography: 13px body, 15px headings, line-height 1.2\par
+\par
+CHIPS:\par
+- 44px height, 10px border-radius\par
+- Layout: [Emoji 20px] [Label] [+Price] [Checkmark if selected]\par
+- Tap: scale 0.97 for 120ms\par
+- Disabled: 40% opacity when limits hit\par
+\par
+BOWL:\par
+- Donut ring: 8px stroke, animates fill based on kcal / target\par
+- Center: large kcal number + target\par
+- Below: 3 tiny horizontal bars (P/C/F) with values\par
+- Pulse on update: scale 1.05 for 200ms\par
+\par
+NUTRITION POP:\par
+- Fixed top-24, glassmorphism pill\par
+- Shows 1 fact for 1.5s on chip tap\par
+- Throttle 1.5s between pops\par
+\par
+LOGIC:\par
+- Veggies: min/max based on size (750=4-12, 1000=4-14, 1500=4-16)\par
+- Sauces: min 1, max 10, first 3 free then 2\f6\rtlch\lang1037\'a4 \f0\ltrch\lang1033 each\par
+- Primary extra: \f6\rtlch\lang1037 0-1 \f0\ltrch\lang1033 (included)\par
+- Paid additions: \f6\rtlch\lang1037 0-5 \f0\ltrch\lang1033 (unit prices)\par
+- Side: exactly \f6\rtlch\lang1037 1 \f0\ltrch\lang1033 (bread/croutons/none)\par
+- Mixing: exactly \f6\rtlch\lang1037 1 \f0\ltrch\lang1033 (mix/no-mix)\par
+\par
+NUTRITION:\par
+- Calculate per item: (grams_per_scoop / \f6\rtlch\lang1037 100\f0\ltrch\lang1033 ) * per_\f6\rtlch\lang1037 100\f0\ltrch\lang1033 g values\par
+- Sum all selected items\par
+- Display: kcal (rounded), P/C/F (\f6\rtlch\lang1037 1 \f0\ltrch\lang1033 decimal)\par
+\par
+PRICE:\par
+- Base: size.base_price\par
+- Add: veggie price_deltas + paid sauces + paid_additions\par
+\par
+RTL:\par
+- Hebrew text, right-to-left layout\par
+- dir="rtl" on root\par
+- Reverse flex/grid directions where needed\par
+\par
+COLORS:\par
+- Green: #\f6\rtlch\lang1037 5\f0\ltrch\lang1033 AC\f6\rtlch\lang1037 568\f0\ltrch\lang1033\par
+- Lemon: #FFD\f6\rtlch\lang1037 93\f0\ltrch\lang1033 B\par
+- Ink: #\f6\rtlch\lang1037 0\f0\ltrch\lang1033 A\f6\rtlch\lang1037 3\f0\ltrch\lang1033 D\f6\rtlch\lang1037 2\f0\ltrch\lang1033 E\par
+- BG: #FAFAF\f6\rtlch\lang1037 5\f0\ltrch\lang1033\par
+\par
+Use Next.js \f6\rtlch\lang1037 14\f0\ltrch\lang1033 , TypeScript, Tailwind. Make it feel like a premium mobile game. Dense, no wasted space. Smooth \f6\rtlch\lang1037 150\f0\ltrch\lang1033 ms transitions. All touch targets \f6\rtlch\lang1037 44\f0\ltrch\lang1033 px minimum.\par
+\par
+Start with menu data structure I'll provide separately.\par
+```\par
+\par
+---\par
+\par
+## \f1\lang1037\u-10179?\u-8986?\f2\lang1033  \f0 SAMPLE MENU DATA\par
+\par
+```json\par
+\{\par
+  "sizes": [\par
+    \{ "id": "750", "base_price": 54, "veg_min": 4, "veg_max": 12, "target_kcal": 500 \},\par
+    \{ "id": "1000", "base_price": 62, "veg_min": 4, "veg_max": 14, "target_kcal": 650 \},\par
+    \{ "id": "1500", "base_price": null, "veg_min": 4, "veg_max": 16, "target_kcal": 800 \}\par
+  ],\par
+  "veggies": [\par
+    \{ "id": "lettuce", "he": "\f6\rtlch\lang1037\'e7\'f1\'e4\f0\ltrch\lang1033 ", "icon": "\f3\lang1037\u-10178?\u-8852?\f0\lang1033 ", "category": "veggies", "nutrition": \{ "grams_per_scoop": 30, "per_100g": \{ "kcal": 15, "protein": 1.4, "carbs": 2.9, "fat": 0.2 \} \}, "facts": [\{ "he": "\f6\rtlch\lang1037\'f2\'f9\'e9\'f8\'e4 \'e1\'f1\'e9\'e1\'e9\'ed\f0\ltrch\lang1033 " \}] \},\par
+    \{ "id": "tomato", "he": "\f6\rtlch\lang1037\'f2\'e2\'e1\'f0\'e9\'e4\f0\ltrch\lang1033 ", "icon": "\f1\lang1037\u-10180?\u-8379?\f0\lang1033 ", "category": "veggies", "nutrition": \{ "grams_per_scoop": 40, "per_100g": \{ "kcal": 18, "protein": 0.9, "carbs": 3.9, "fat": 0.2 \} \}, "facts": [\{ "he": "\f6\rtlch\lang1037\'e5\'e9\'e8\'ee\'e9\'ef\f0\ltrch\lang1033  C \f6\rtlch\lang1037\'e2\'e1\'e5\'e4\f0\ltrch\lang1033 " \}] \},\par
+    \{ "id": "quinoa", "he": "\f6\rtlch\lang1037\'f7\'e9\'f0\'e5\'e0\'e4\f0\ltrch\lang1033 ", "icon": "\f1\lang1037\u-10180?\u-8386?\f0\lang1033 ", "price_delta": 2, "category": "grains", "nutrition": \{ "grams_per_scoop": 50, "per_100g": \{ "kcal": 120, "protein": 4.4, "carbs": 21.3, "fat": 1.9 \} \}, "facts": [\{ "he": "\f6\rtlch\lang1037\'e7\'ec\'e1\'e5\'ef \'ee\'ec\'e0\f0\ltrch\lang1033 " \}], "rarity": "premium" \}\par
+  ],\par
+  "sauces": [\par
+    \{ "id": "tahini", "he": "\f6\rtlch\lang1037\'e8\'e7\'e9\'f0\'e4\f0\ltrch\lang1033 ", "icon": "\f1\lang1037\u-10178?\u-8868?\f0\lang1033 ", "category": "sauces", "nutrition": \{ "grams_per_scoop": 20, "per_100g": \{ "kcal": 595, "protein": 17, "carbs": 21, "fat": 54 \} \}, "facts": [\{ "he": "\f6\rtlch\lang1037\'f2\'f9\'e9\'f8\'e4 \'e1\'f1\'e9\'e3\'ef\f0\ltrch\lang1033 " \}] \},\par
+    \{ "id": "lemon", "he": "\f6\rtlch\lang1037\'ec\'e9\'ee\'e5\'ef\f0\ltrch\lang1033 ", "icon": "\f1\lang1037\u-10180?\u-8373?\f0\lang1033 ", "category": "sauces", "nutrition": \{ "grams_per_scoop": 15, "per_100g": \{ "kcal": 29, "protein": 1.1, "carbs": 9.3, "fat": 0.3 \} \}, "facts": [\{ "he": "\f6\rtlch\lang1037\'ee\'f8\'f2\'f0\'ef\f0\ltrch\lang1033 " \}] \}\par
+  ],\par
+  "primary_extra": [\par
+    \{ "id": "egg", "he": "\f6\rtlch\lang1037\'e1\'e9\'f6\'e4\f0\ltrch\lang1033 ", "icon": "\f1\lang1037\u-10178?\u-8870?\f0\lang1033 ", "category": "proteins", "nutrition": \{ "grams_per_scoop": 50, "per_100g": \{ "kcal": 155, "protein": 13, "carbs": 1.1, "fat": 11 \} \}, "facts": [\{ "he": "\f6\rtlch\lang1037\'e7\'ec\'e1\'e5\'ef \'e0\'e9\'eb\'e5\'fa\'e9\f0\ltrch\lang1033 " \}] \}\par
+  ],\par
+  "paid_additions": [\par
+    \{ "id": "halloumi", "he": "\f6\rtlch\lang1037\'e7\'ec\'e5\'ee\'e9\f0\ltrch\lang1033 ", "icon": "\f1\lang1037\u-10178?\u-8768?\f0\lang1033 ", "unit_price": 8, "category": "proteins", "nutrition": \{ "grams_per_scoop": 40, "per_100g": \{ "kcal": 316, "protein": 21, "carbs": 2, "fat": 26 \} \}, "facts": [\{ "he": "\f6\rtlch\lang1037\'e2\'e1\'e9\'f0\'e4 \'ee\'ec\'e5\'e7\'e4\f0\ltrch\lang1033 " \}] \}\par
+  ],\par
+  "side": [\par
+    \{ "id": "bread", "he": "\f6\rtlch\lang1037\'ec\'e7\'ed\f0\ltrch\lang1033 ", "icon": "\f1\lang1037\u-10180?\u-8354?\f0\lang1033 " \},\par
+    \{ "id": "croutons", "he": "\f6\rtlch\lang1037\'f7\'f8\'e5\'e8\'e5\'f0\'e9\'ed\f0\ltrch\lang1033 ", "icon": "\f1\lang1037\u-10178?\u-8874?\f0\lang1033 " \},\par
+    \{ "id": "none", "he": "\f6\rtlch\lang1037\'ec\'ec\'e0\f0\ltrch\lang1033 ", "icon": "\f4\lang1037\u9940?\f0\lang1033 " \}\par
+  ],\par
+  "mixing": [\par
+    \{ "id": "mix", "he": "\f6\rtlch\lang1037\'f2\'f8\'e1\'e1 \'e4\'eb\'ec\f0\ltrch\lang1033 ", "icon": "\f1\lang1037\u-10180?\u-8448?\f0\lang1033 " \},\par
+    \{ "id": "no_mix", "he": "\f6\rtlch\lang1037\'ec\'ec\'e0 \'f2\'f8\'e1\'e5\'e1\f0\ltrch\lang1033 ", "icon": "\f1\lang1037\u-10179?\u-8986?\f0\lang1033 " \}\par
+  ]\par
+\}\par
+```\par
+\par
+---\par
+\par
+## \f4\u9989?\f2  \f0 ACCEPTANCE CRITERIA\par
+\par
+Before submitting, verify:\par
+\par
+- [ ] Bowl canvas is always visible (sticky)\par
+- [ ] Donut ring animates smoothly to kcal target\par
+- [ ] Chips use category gradients when selected\par
+- [ ] Premium items have gold glow\par
+- [ ] 3-column grid on mobile\par
+- [ ] All touch targets are 44px minimum\par
+- [ ] RTL layout works perfectly\par
+- [ ] Nutrition pop shows for 1.5s, throttled\par
+- [ ] Price updates live\par
+- [ ] Size selector changes bowl target + limits\par
+- [ ] Can build a salad in \f5\u8804?\f0 5 taps\par
+- [ ] No layout shifts or jank\par
+- [ ] Typography is compact (13-15px)\par
+- [ ] Spacing is tight (8px grid)\par
+- [ ] Looks premium, not basic\par
+\par
+---\par
+\par
+## \f1\u-10179?\u-8576?\f2  \f0 BUILD ORDER\par
+\par
+1. **Setup:** Next.js 14 + TypeScript + Tailwind\par
+2. **Tokens:** Define colors, spacing, typography\par
+3. **Layout:** Header + Bowl + Tabs + Grid + Bottom Bar\par
+4. **Bowl Canvas:** Donut ring + bars + animations\par
+5. **Ingredient Chips:** Grid with gradients + selection logic\par
+6. **Nutrition Logic:** Calculate on each change\par
+7. **Price Logic:** Base + deltas + paid items\par
+8. **Nutrition Pop:** Tooltip with throttle\par
+9. **Polish:** Transitions, sounds (optional), RTL tweaks\par
+10. **Test:** Build a salad, check all rules\par
+\par
+---\par
+\par
+## \f1\u-10179?\u-9055?\f2  \f0 TIPS FOR GROK\par
+\par
+- **Be specific about gradients** - paste exact CSS\par
+- **Show example chip HTML** - easier than describing\par
+- **Mention "sticky" explicitly** - for bowl + bars\par
+- **Request "memoization"** - for perf\par
+- **Ask for "category prop"** - to apply right gradient\par
+- **Say "no layout shift"** - prevent CLS\par
+- **Emphasize "dense"** - or it'll be too spacious\par
+\par
+Good luck! \f1\u-10180?\u-8280?\f0\lang9\par
+}
+ 

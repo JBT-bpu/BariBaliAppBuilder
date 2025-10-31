@@ -1,0 +1,75 @@
+category_key,category_he,item_id,item_he,item_en,price_delta,unit_price
+veggies,ירקות לבחירה,lettuce,חסה,Lettuce,0.0,
+veggies,ירקות לבחירה,baby_leaf,עלה בייבי,Baby leaves,0.0,
+veggies,ירקות לבחירה,tomato,עגבניות,Tomato,0.0,
+veggies,ירקות לבחירה,cucumber,מלפפון,Cucumber,0.0,
+veggies,ירקות לבחירה,bell_pepper,גמבה,Bell pepper,0.0,
+veggies,ירקות לבחירה,black_lentils,עדשים שחורות,Black lentils,0.0,
+veggies,ירקות לבחירה,green_lentils,עדשים ירוקות,Green lentils,0.0,
+veggies,ירקות לבחירה,mung_beans,שעועית מאש,Mung beans,0.0,
+veggies,ירקות לבחירה,carrot,גזר,Carrot,0.0,
+veggies,ירקות לבחירה,quinoa,קינואה,Quinoa,2.0,
+veggies,ירקות לבחירה,brown_rice,אורז מלא,Brown rice,0.0,
+veggies,ירקות לבחירה,bulgur,בורגול,Bulgur,0.0,
+veggies,ירקות לבחירה,roasted_eggplant,חציל קלוי,Roasted eggplant,0.0,
+veggies,ירקות לבחירה,chickpeas,גרגירי חומוס,Chickpeas,0.0,
+veggies,ירקות לבחירה,baked_sweet_potato,בטטה אפויה,Baked sweet potato,0.0,
+veggies,ירקות לבחירה,baked_potato,"תפו""א אפוי",Baked potato,0.0,
+veggies,ירקות לבחירה,sprouts,נבטים,Sprouts,0.0,
+veggies,ירקות לבחירה,green_peas,אפונה ירוקה,Green peas,0.0,
+veggies,ירקות לבחירה,corn,תירס,Corn,0.0,
+veggies,ירקות לבחירה,cabbage_white,כרוב לבן,White cabbage,0.0,
+veggies,ירקות לבחירה,cabbage_purple,כרוב סגול,Purple cabbage,0.0,
+veggies,ירקות לבחירה,mushrooms,פטריות,Mushrooms,0.0,
+veggies,ירקות לבחירה,red_onion,בצל סגול,Red onion,0.0,
+veggies,ירקות לבחירה,green_onion,בצל ירוק,Green onion,0.0,
+veggies,ירקות לבחירה,radish,צנון,Radish,0.0,
+veggies,ירקות לבחירה,kohlrabi,קולורבי,Kohlrabi,0.0,
+veggies,ירקות לבחירה,celery,סלרי,Celery,0.0,
+veggies,ירקות לבחירה,fusilli_pasta,פסטה מסולסלת,Fusilli pasta,0.0,
+veggies,ירקות לבחירה,cilantro,כוסברה,Coriander,0.0,
+veggies,ירקות לבחירה,parsley,פטרוזיליה,Parsley,0.0,
+veggies,ירקות לבחירה,pickles,מלפפון חמוץ,Pickles,0.0,
+veggies,ירקות לבחירה,hot_pepper,פלפל חריף,Hot pepper,0.0,
+veggies,ירקות לבחירה,cranberries,חמוציות,Cranberries (dried),0.0,
+veggies,ירקות לבחירה,black_olives,זיתים שחורים,Black olives,0.0,
+veggies,ירקות לבחירה,green_olives,זיתים ירוקים,Green olives,0.0,
+veggies,ירקות לבחירה,sunflower_seeds,גרעיני חמניה,Sunflower seeds,0.0,
+veggies,ירקות לבחירה,sesame,שומשום,Sesame,0.0,
+veggies,ירקות לבחירה,chia,זרעי צ'יה,Chia seeds,0.0,
+veggies,ירקות לבחירה,zaatar,זעתר,Za'atar,0.0,
+veggies,ירקות לבחירה,fresh_beet,סלק טרי,Fresh beet,0.0,
+sauces,רטבים לבחירה,olive_oil,שמן זית,Olive oil,,3.0
+sauces,רטבים לבחירה,lemon_juice,לימון טרי,Fresh lemon,,3.0
+sauces,רטבים לבחירה,thousand_island,אלף האיים,Thousand Island,,3.0
+sauces,רטבים לבחירה,garlic,רוטב שום,Garlic sauce,,3.0
+sauces,רטבים לבחירה,citrus_vinaigrette,ויניגרט הדרים,Citrus vinaigrette,,3.0
+sauces,רטבים לבחירה,tahini,טחינה,Tahini,,3.0
+sauces,רטבים לבחירה,pesto,פסטו,Pesto,,4.0
+sauces,רטבים לבחירה,zhug,סחוג,Zhoug,,4.0
+sauces,רטבים לבחירה,balsamic,בלסמי,Balsamic,,3.0
+sauces,רטבים לבחירה,sweet_chili,צ'ילי מתוק,Sweet chili,,3.0
+sauces,רטבים לבחירה,teriyaki,טריאקי,Teriyaki,,3.0
+sauces,רטבים לבחירה,soy,סויה סיני,Soy (Chinese),,3.0
+sauces,רטבים לבחירה,caesar,קיסר,Caesar,,5.0
+mixing,בחירת ערבוב,mix_no_sauce,לערבב את הסלט ללא הרוטב,Mix salad without dressing,0.0,
+mixing,בחירת ערבוב,no_mix_thanks,"לא לערבב, תודה",Do not mix,0.0,
+side,לחם או קרוטונים לצד הסלט,bread,עם לחם 🍞,With bread,0.0,
+side,לחם או קרוטונים לצד הסלט,croutons,עם קרוטונים,With croutons,0.0,
+side,לחם או קרוטונים לצד הסלט,none,ללא תוספת,No side,0.0,
+primary_extra,בחרו תוספת (כלולה),egg,ביצה קשה,Hard-boiled egg,0.0,
+primary_extra,בחרו תוספת (כלולה),tuna,טונה,Tuna,0.0,
+primary_extra,בחרו תוספת (כלולה),tofu_olive_oil,טופו מוקפץ בשמן זית,Stir-fried tofu in olive oil,0.0,
+primary_extra,בחרו תוספת (כלולה),feta5,גבינת פטה 5%,Feta cheese 5%,0.0,
+primary_extra,בחרו תוספת (כלולה),baby_mozzarella,בייבי מוצרלה,Baby mozzarella,0.0,
+paid_additions,תוספות בתשלום,egg_paid,ביצה קשה,Hard-boiled egg,,5.0
+paid_additions,תוספות בתשלום,feta_paid,פטה,Feta,,7.0
+paid_additions,תוספות בתשלום,tuna_paid,טונה,Tuna,,7.0
+paid_additions,תוספות בתשלום,tofu_teriyaki_paid,טופו מוקפץ בטריאקי,Stir-fried tofu in teriyaki,,10.0
+paid_additions,תוספות בתשלום,halloumi_paid,גבינת חלומי,Halloumi,,12.0
+paid_additions,תוספות בתשלום,parmesan_paid,פרמז'ן,Parmesan,,4.0
+paid_additions,תוספות בתשלום,honey_paid,דבש,Honey,,4.0
+paid_additions,תוספות בתשלום,jala_paid,ג'עלה,Jala (nuts?),,4.0
+paid_additions,תוספות בתשלום,extra_bread_paid,תוספת לחם,Extra bread,,4.0
+paid_additions,תוספות בתשלום,croutons_paid,קרוטונים,Croutons,,3.0
+paid_additions,תוספות בתשלום,tofu_oil_salt_paid,טופו מוקפץ בשמן זית מלח פלפל,"Tofu fried in olive oil, salt & pepper",,10.0

@@ -1,0 +1,277 @@
+0) Product Goal
+
+A mobile-first, dense, game-like salad builder that:
+
+lets users compose a salad fast (≤5 taps, minimal scrolling),
+
+shows live nutrition HUD (Protein/Carbs/Fat + kcal) and tiny nutrition pops,
+
+supports pre-paid pickup time slots,
+
+can be launched from WhatsApp and send confirmation back,
+
+plugs into current POS later via an adapter.
+
+1) Tech Stack (feel free to adjust)
+
+Frontend: Next.js 14 (App Router) + React 19, TypeScript, Tailwind + shadcn/ui, Framer Motion (micro-motion only).
+
+State: Zustand (slices: menu, builder, nutrition, ui).
+
+Icons: Iconify React (use provided 211-icon manifest).
+
+Audio: Howler.js (short “plop/click” SFX).
+
+Backend (MVP): Next.js Route Handlers or small FastAPI service. DB: Supabase (Postgres).
+Adapters later: POS/payment webhook, WhatsApp API template sender.
+
+PWA: manifest + service worker (offline shell + caching).
+
+i18n/RTL: Hebrew default; support LTR fallback.
+
+2) Visual System (dense, compact)
+
+8px grid; paddings 4–8–12–16px. Font sizes 13–15px (compact), line-height 1.1–1.3.
+
+Colors:
+
+--green:#5AC568 (primary), --lemon:#FFD93B (accent),
+
+--ink:#0A3D2E (text), --bg:#FAFAF5 (base), --glass:rgba(255,255,255,.92).
+
+Components: chips (44px height), slim bars, compact bottom sheet on mobile, side panel on desktop.
+
+Bowl always visible. Builder opens as sheet; never full-screen modals.
+
+Create ui/tokens.ts (colors/radii/spacing) and use everywhere.
+
+3) Core UX Flow
+
+Enter (from WhatsApp deep link) → size defaults to last used.
+
+Build with category chips (Veg → Protein/Extra → Sauces → Side).
+
+Nutrition HUD updates on each tap. Pop shows 1 short fact.
+
+Pick slot (15-min buckets, capacity-aware).
+
+Pay & Pickup (pre-pay).
+
+Success screen → “Send to WhatsApp” + “Save as My Usual”.
+
+Density rules
+
+3-column chip grid, horizontal carousels if overflow.
+
+Price deltas inline (e.g., “קינואה +2₪”).
+
+No dead space; concise labels.
+
+4) Data Model (JSON)
+
+Use/extend the files we already prepared.
+
+4.1 Sizes & selection limits
+"sizes":[
+  {"id":"750","base_price":54,"veg_min":4,"veg_max":12},
+  {"id":"1000","base_price":62,"veg_min":4,"veg_max":14},
+  {"id":"1500","base_price":null,"veg_min":4,"veg_max":16}
+]
+
+4.2 Categories
+
+veggies: range depends on size (see size_rules).
+
+sauces: min 1 / max 10, first 3 free, then unit price per sauce.
+
+mixing: exact 1 (mix/no-mix).
+
+side: exact 1 (bread/croutons/none).
+
+primary_extra: up to 1 (included).
+
+paid_additions: up to 5 (unit prices).
+
+Each item supports:
+
+{
+  "id":"quinoa",
+  "he":"קינואה",
+  "en":"Quinoa",
+  "price_delta":2,
+  "icon":"noto:ear-of-corn",
+  "nutrition":{
+    "grams_per_scoop":50,
+    "per_100g":{"kcal":120,"protein":4.4,"carbs":21.3,"fat":1.9,"fiber":2.8},
+    "source":"approx"
+  },
+  "facts":[
+    {"he":"קינואה מוסיפה חלבון מלא","en":"Complete protein boost."}
+  ],
+  "tags":["grain","vegan","protein+","fiber+"],
+  "rarity":"premium"
+}
+
+
+If nutrition absent, use sensible defaults (see cheat table we provided).
+
+5) Calculation Engine (client)
+5.1 Price
+total = base_price(size)
+  + Σ(veggies.price_delta)
+  + paid_sauces_total (beyond 3 free)
+  + Σ(paid_additions.unit_price)
+
+5.2 Nutrition (per scoop)
+
+For each selected item:
+
+g = item.nutrition.grams_per_scoop || default(item.category)
+f = g / 100
+add kcal = per100.kcal*f; protein = per100.protein*f; carbs = ...; fat = ...
+
+
+Keep running totals {kcal, protein, carbs, fat, fiber}.
+
+Targets by size (configurable):
+
+750 → 500 kcal, 1000 → 650 kcal, 1500 → 800 kcal.
+HUD: tri-bars for P/C/F + donut ring for kcal/target.
+
+6) Micro-interactions
+
+Chip tap: 120–180ms spring, small sound.
+
+Nutrition pop: pill above chip; show 1–2s; throttle 1.5s; replace text if spam taps.
+
+HUD pulse: small lemon gradient pulse on value change.
+
+Threshold badges: e.g., Protein ≥30g → show “High Protein ✓”.
+
+7) UI Composition (key components)
+
+BowlCanvas — visual bowl with donut ring (kcal) & tiny bars overlay.
+
+IngredientChip — compact chip with icon, label, optional +₪.
+
+IngredientSheet — bottom sheet (mobile) / side panel (desktop) with tabs.
+
+NutritionHUD — mini tri-meter + kcal ring (also CompactMeterPanel for desktop).
+
+NutritionPop — tiny tooltip pill.
+
+SlotPicker — shows 15-min buckets with availability (capacity per slot).
+
+PayBar — sticky bottom bar (total + CTA).
+
+OrderSummary — final list + macros + pickup details.
+
+8) State Slices (Zustand)
+// menuSlice: raw menu, sizes, defaults
+// builderSlice: { sizeId, veggies:Set, sauces:Set, primaryExtra?:id, paid:Set, side:id, mixing:id }
+// nutritionSlice: totals, targets, recompute(selected, menu)
+// uiSlice: sheet open/tab, pops {text, anchor}, haptics on/off
+
+
+Derived selectors: canProceed, priceTotal, freeSaucesRemaining.
+
+9) Backend Interfaces (MVP)
+9.1 API routes (Next.js)
+
+GET /api/menu → current menu JSON.
+
+POST /api/order/create → payload below → returns {orderId, status:'pending_payment', paymentUrl}.
+
+POST /api/payment/webhook → verify → mark paid → push to orders table.
+
+GET /api/slots → available pickup slots (capacity left).
+
+POST /api/whatsapp/notify (later) → send template “Order paid / ready”.
+
+9.2 Order payload
+{
+  "source":"web",
+  "size":"1000",
+  "items":{
+    "veggies":["lettuce","tomato","quinoa", "..."],
+    "sauces":["tahini","lemon_juice","olive_oil"],
+    "primary_extra":"egg",
+    "paid_additions":["halloumi_paid","parmesan_paid"],
+    "side":"bread",
+    "mixing":"mix_no_sauce"
+  },
+  "totals":{"price":62,"kcal":612,"protein":28,"carbs":52,"fat":18},
+  "pickup":{"slot":"2025-10-28T13:30:00+02:00"},
+  "customer":{"wa":"9725XXXXXXXX"},
+  "notes":""
+}
+
+10) Performance & Quality
+
+Keep bundle light; lazy-load images/icons; memoize chip lists.
+
+Framer Motion only for small transitions; no heavy 3D in MVP.
+
+A11y: RTL by default, semantic labels, 44px minimum tap targets, aria-live="polite" for pops.
+
+Error tolerance: local cache (indexedDB) of current build; retry on network fail.
+
+Analytics (optional): PostHog/Plausible events: add_item, remove_item, open_slot, pay_click, order_paid.
+
+11) Payments & POS (adapter-ready)
+
+payment.ts adapter interface: createPayment(amount, orderId) → {paymentUrl}; handleWebhook(payload) → {ok}.
+
+For now, mock with a fake success endpoint; later plug YaadPay/PayMe or your POS gateway.
+
+Webhook marks paid → emits event to Kitchen Dashboard (separate minimal page) sorted by pickup time.
+
+12) WhatsApp integration
+
+Deep link to open builder: https://baribali.app/build?session=....
+
+After payment: optional API to send summary card (order, pickup slot, nutrition).
+
+Quick reply “🔁 אותו דבר” triggers reorder link.
+
+13) Deliverables (MVP Sprint)
+
+UI shell (dense layout + tokens).
+
+Builder flow with size rules, chips, limits, price calc.
+
+Nutrition HUD + Nutrition Pop (seed ~30 items with nutrition/facts).
+
+Slot picker (client mock or Supabase table).
+
+Payment mock + webhook loopback.
+
+Order summary + WhatsApp deeplink.
+
+PWA (manifest+SW), RTL, basic analytics.
+
+14) Acceptance Criteria
+
+Build a 1000ml salad in ≤5 taps without leaving the main screen.
+
+Live macro bars + kcal ring update on each tap.
+
+3 free sauces rule enforced; price & macros reflect extras.
+
+Slots disable when capacity exhausted.
+
+Page remains responsive at 60fps on mid-range Android.
+
+Works flawlessly in Hebrew (RTL).
+
+15) Your Creative License
+
+You can:
+
+swap libs if it improves perf/quality,
+
+adjust targets, micro-motions, or visual density,
+
+propose smarter slot logic or better chip design,
+
+ship with nutrition defaults and progressively enhance.

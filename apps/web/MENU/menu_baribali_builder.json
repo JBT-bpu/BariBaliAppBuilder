@@ -1,0 +1,572 @@
+{
+  "meta": {
+    "brand": "בריבלי",
+    "locale": "he-IL",
+    "currency": "ILS",
+    "notes": "MVP menu structure derived from user-provided 10bis text. Prices missing for some items are left null for later fill."
+  },
+  "sizes": [
+    {
+      "id": "750",
+      "label_he": "750 מ״ל",
+      "label_en": "750 ml",
+      "base_price": 54.0,
+      "veg_min": 4,
+      "veg_max": 12
+    },
+    {
+      "id": "1000",
+      "label_he": "1000 מ״ל",
+      "label_en": "1000 ml",
+      "base_price": 62.0,
+      "veg_min": 4,
+      "veg_max": 14
+    },
+    {
+      "id": "1500",
+      "label_he": "1500 מ״ל",
+      "label_en": "1500 ml",
+      "base_price": null,
+      "veg_min": 4,
+      "veg_max": 16,
+      "price_note": "fill later"
+    }
+  ],
+  "rules": {
+    "sauces_included_free": 3,
+    "sauces_min": 1,
+    "sauces_max": 10,
+    "primary_extra_max": 1,
+    "paid_additions_max": 5,
+    "bread_choice_required": true,
+    "mixing_choice_required": true
+  },
+  "categories": [
+    {
+      "key": "veggies",
+      "title_he": "ירקות לבחירה",
+      "title_en": "Vegetables to choose",
+      "selection": {
+        "type": "range_by_size",
+        "size_rules": {
+          "750": [
+            4,
+            12
+          ],
+          "1000": [
+            4,
+            14
+          ],
+          "1500": [
+            4,
+            16
+          ]
+        }
+      },
+      "items": [
+        {
+          "id": "lettuce",
+          "he": "חסה",
+          "en": "Lettuce",
+          "price_delta": 0
+        },
+        {
+          "id": "baby_leaf",
+          "he": "עלה בייבי",
+          "en": "Baby leaves",
+          "price_delta": 0
+        },
+        {
+          "id": "tomato",
+          "he": "עגבניות",
+          "en": "Tomato",
+          "price_delta": 0
+        },
+        {
+          "id": "cucumber",
+          "he": "מלפפון",
+          "en": "Cucumber",
+          "price_delta": 0
+        },
+        {
+          "id": "bell_pepper",
+          "he": "גמבה",
+          "en": "Bell pepper",
+          "price_delta": 0
+        },
+        {
+          "id": "black_lentils",
+          "he": "עדשים שחורות",
+          "en": "Black lentils",
+          "price_delta": 0
+        },
+        {
+          "id": "green_lentils",
+          "he": "עדשים ירוקות",
+          "en": "Green lentils",
+          "price_delta": 0
+        },
+        {
+          "id": "mung_beans",
+          "he": "שעועית מאש",
+          "en": "Mung beans",
+          "price_delta": 0
+        },
+        {
+          "id": "carrot",
+          "he": "גזר",
+          "en": "Carrot",
+          "price_delta": 0
+        },
+        {
+          "id": "quinoa",
+          "he": "קינואה",
+          "en": "Quinoa",
+          "price_delta": 2.0
+        },
+        {
+          "id": "brown_rice",
+          "he": "אורז מלא",
+          "en": "Brown rice",
+          "price_delta": 0
+        },
+        {
+          "id": "bulgur",
+          "he": "בורגול",
+          "en": "Bulgur",
+          "price_delta": 0
+        },
+        {
+          "id": "roasted_eggplant",
+          "he": "חציל קלוי",
+          "en": "Roasted eggplant",
+          "price_delta": 0
+        },
+        {
+          "id": "chickpeas",
+          "he": "גרגירי חומוס",
+          "en": "Chickpeas",
+          "price_delta": 0
+        },
+        {
+          "id": "baked_sweet_potato",
+          "he": "בטטה אפויה",
+          "en": "Baked sweet potato",
+          "price_delta": 0
+        },
+        {
+          "id": "baked_potato",
+          "he": "תפו\"א אפוי",
+          "en": "Baked potato",
+          "price_delta": 0
+        },
+        {
+          "id": "sprouts",
+          "he": "נבטים",
+          "en": "Sprouts",
+          "price_delta": 0
+        },
+        {
+          "id": "green_peas",
+          "he": "אפונה ירוקה",
+          "en": "Green peas",
+          "price_delta": 0
+        },
+        {
+          "id": "corn",
+          "he": "תירס",
+          "en": "Corn",
+          "price_delta": 0
+        },
+        {
+          "id": "cabbage_white",
+          "he": "כרוב לבן",
+          "en": "White cabbage",
+          "price_delta": 0
+        },
+        {
+          "id": "cabbage_purple",
+          "he": "כרוב סגול",
+          "en": "Purple cabbage",
+          "price_delta": 0
+        },
+        {
+          "id": "mushrooms",
+          "he": "פטריות",
+          "en": "Mushrooms",
+          "price_delta": 0
+        },
+        {
+          "id": "red_onion",
+          "he": "בצל סגול",
+          "en": "Red onion",
+          "price_delta": 0
+        },
+        {
+          "id": "green_onion",
+          "he": "בצל ירוק",
+          "en": "Green onion",
+          "price_delta": 0
+        },
+        {
+          "id": "radish",
+          "he": "צנון",
+          "en": "Radish",
+          "price_delta": 0
+        },
+        {
+          "id": "kohlrabi",
+          "he": "קולורבי",
+          "en": "Kohlrabi",
+          "price_delta": 0
+        },
+        {
+          "id": "celery",
+          "he": "סלרי",
+          "en": "Celery",
+          "price_delta": 0
+        },
+        {
+          "id": "fusilli_pasta",
+          "he": "פסטה מסולסלת",
+          "en": "Fusilli pasta",
+          "price_delta": 0
+        },
+        {
+          "id": "cilantro",
+          "he": "כוסברה",
+          "en": "Coriander",
+          "price_delta": 0
+        },
+        {
+          "id": "parsley",
+          "he": "פטרוזיליה",
+          "en": "Parsley",
+          "price_delta": 0
+        },
+        {
+          "id": "pickles",
+          "he": "מלפפון חמוץ",
+          "en": "Pickles",
+          "price_delta": 0
+        },
+        {
+          "id": "hot_pepper",
+          "he": "פלפל חריף",
+          "en": "Hot pepper",
+          "price_delta": 0
+        },
+        {
+          "id": "cranberries",
+          "he": "חמוציות",
+          "en": "Cranberries (dried)",
+          "price_delta": 0
+        },
+        {
+          "id": "black_olives",
+          "he": "זיתים שחורים",
+          "en": "Black olives",
+          "price_delta": 0
+        },
+        {
+          "id": "green_olives",
+          "he": "זיתים ירוקים",
+          "en": "Green olives",
+          "price_delta": 0
+        },
+        {
+          "id": "sunflower_seeds",
+          "he": "גרעיני חמניה",
+          "en": "Sunflower seeds",
+          "price_delta": 0
+        },
+        {
+          "id": "sesame",
+          "he": "שומשום",
+          "en": "Sesame",
+          "price_delta": 0
+        },
+        {
+          "id": "chia",
+          "he": "זרעי צ'יה",
+          "en": "Chia seeds",
+          "price_delta": 0
+        },
+        {
+          "id": "zaatar",
+          "he": "זעתר",
+          "en": "Za'atar",
+          "price_delta": 0
+        },
+        {
+          "id": "fresh_beet",
+          "he": "סלק טרי",
+          "en": "Fresh beet",
+          "price_delta": 0
+        }
+      ]
+    },
+    {
+      "key": "sauces",
+      "title_he": "רטבים לבחירה",
+      "title_en": "Sauces",
+      "selection": {
+        "type": "range",
+        "min": 1,
+        "max": 10,
+        "included_free": 3,
+        "extra_price_applies": true
+      },
+      "items": [
+        {
+          "id": "olive_oil",
+          "he": "שמן זית",
+          "en": "Olive oil",
+          "unit_price": 3.0
+        },
+        {
+          "id": "lemon_juice",
+          "he": "לימון טרי",
+          "en": "Fresh lemon",
+          "unit_price": 3.0
+        },
+        {
+          "id": "thousand_island",
+          "he": "אלף האיים",
+          "en": "Thousand Island",
+          "unit_price": 3.0
+        },
+        {
+          "id": "garlic",
+          "he": "רוטב שום",
+          "en": "Garlic sauce",
+          "unit_price": 3.0
+        },
+        {
+          "id": "citrus_vinaigrette",
+          "he": "ויניגרט הדרים",
+          "en": "Citrus vinaigrette",
+          "unit_price": 3.0
+        },
+        {
+          "id": "tahini",
+          "he": "טחינה",
+          "en": "Tahini",
+          "unit_price": 3.0
+        },
+        {
+          "id": "pesto",
+          "he": "פסטו",
+          "en": "Pesto",
+          "unit_price": 4.0
+        },
+        {
+          "id": "zhug",
+          "he": "סחוג",
+          "en": "Zhoug",
+          "unit_price": 4.0
+        },
+        {
+          "id": "balsamic",
+          "he": "בלסמי",
+          "en": "Balsamic",
+          "unit_price": 3.0
+        },
+        {
+          "id": "sweet_chili",
+          "he": "צ'ילי מתוק",
+          "en": "Sweet chili",
+          "unit_price": 3.0
+        },
+        {
+          "id": "teriyaki",
+          "he": "טריאקי",
+          "en": "Teriyaki",
+          "unit_price": 3.0
+        },
+        {
+          "id": "soy",
+          "he": "סויה סיני",
+          "en": "Soy (Chinese)",
+          "unit_price": 3.0
+        },
+        {
+          "id": "caesar",
+          "he": "קיסר",
+          "en": "Caesar",
+          "unit_price": 5.0
+        }
+      ]
+    },
+    {
+      "key": "mixing",
+      "title_he": "בחירת ערבוב",
+      "title_en": "Mixing preference",
+      "selection": {
+        "type": "exact",
+        "count": 1
+      },
+      "items": [
+        {
+          "id": "mix_no_sauce",
+          "he": "לערבב את הסלט ללא הרוטב",
+          "en": "Mix salad without dressing",
+          "price_delta": 0
+        },
+        {
+          "id": "no_mix_thanks",
+          "he": "לא לערבב, תודה",
+          "en": "Do not mix",
+          "price_delta": 0
+        }
+      ]
+    },
+    {
+      "key": "side",
+      "title_he": "לחם או קרוטונים לצד הסלט",
+      "title_en": "Bread or croutons on the side",
+      "selection": {
+        "type": "exact",
+        "count": 1
+      },
+      "items": [
+        {
+          "id": "bread",
+          "he": "עם לחם 🍞",
+          "en": "With bread",
+          "price_delta": 0
+        },
+        {
+          "id": "croutons",
+          "he": "עם קרוטונים",
+          "en": "With croutons",
+          "price_delta": 0
+        },
+        {
+          "id": "none",
+          "he": "ללא תוספת",
+          "en": "No side",
+          "price_delta": 0
+        }
+      ]
+    },
+    {
+      "key": "primary_extra",
+      "title_he": "בחרו תוספת (כלולה)",
+      "title_en": "Choose one extra (included)",
+      "selection": {
+        "type": "up_to",
+        "max": 1
+      },
+      "items": [
+        {
+          "id": "egg",
+          "he": "ביצה קשה",
+          "en": "Hard-boiled egg",
+          "price_delta": 0
+        },
+        {
+          "id": "tuna",
+          "he": "טונה",
+          "en": "Tuna",
+          "price_delta": 0
+        },
+        {
+          "id": "tofu_olive_oil",
+          "he": "טופו מוקפץ בשמן זית",
+          "en": "Stir-fried tofu in olive oil",
+          "price_delta": 0
+        },
+        {
+          "id": "feta5",
+          "he": "גבינת פטה 5%",
+          "en": "Feta cheese 5%",
+          "price_delta": 0
+        },
+        {
+          "id": "baby_mozzarella",
+          "he": "בייבי מוצרלה",
+          "en": "Baby mozzarella",
+          "price_delta": 0
+        }
+      ]
+    },
+    {
+      "key": "paid_additions",
+      "title_he": "תוספות בתשלום",
+      "title_en": "Paid additions",
+      "selection": {
+        "type": "up_to",
+        "max": 5
+      },
+      "items": [
+        {
+          "id": "egg_paid",
+          "he": "ביצה קשה",
+          "en": "Hard-boiled egg",
+          "unit_price": 5.0
+        },
+        {
+          "id": "feta_paid",
+          "he": "פטה",
+          "en": "Feta",
+          "unit_price": 7.0
+        },
+        {
+          "id": "tuna_paid",
+          "he": "טונה",
+          "en": "Tuna",
+          "unit_price": 7.0
+        },
+        {
+          "id": "tofu_teriyaki_paid",
+          "he": "טופו מוקפץ בטריאקי",
+          "en": "Stir-fried tofu in teriyaki",
+          "unit_price": 10.0
+        },
+        {
+          "id": "halloumi_paid",
+          "he": "גבינת חלומי",
+          "en": "Halloumi",
+          "unit_price": 12.0
+        },
+        {
+          "id": "parmesan_paid",
+          "he": "פרמז'ן",
+          "en": "Parmesan",
+          "unit_price": 4.0
+        },
+        {
+          "id": "honey_paid",
+          "he": "דבש",
+          "en": "Honey",
+          "unit_price": 4.0
+        },
+        {
+          "id": "jala_paid",
+          "he": "ג'עלה",
+          "en": "Jala (nuts?)",
+          "unit_price": 4.0
+        },
+        {
+          "id": "extra_bread_paid",
+          "he": "תוספת לחם",
+          "en": "Extra bread",
+          "unit_price": 4.0
+        },
+        {
+          "id": "croutons_paid",
+          "he": "קרוטונים",
+          "en": "Croutons",
+          "unit_price": 3.0
+        },
+        {
+          "id": "tofu_oil_salt_paid",
+          "he": "טופו מוקפץ בשמן זית מלח פלפל",
+          "en": "Tofu fried in olive oil, salt & pepper",
+          "unit_price": 10.0
+        }
+      ]
+    }
+  ]
+}

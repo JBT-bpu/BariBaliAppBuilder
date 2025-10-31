@@ -1,0 +1,1479 @@
+[
+  {
+    "id":"noto_avocado",
+    "label":"Avocado",
+    "iconify_id":"noto:avocado",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_tomato",
+    "label":"Tomato",
+    "iconify_id":"noto:tomato",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"twemoji_cucumber",
+    "label":"Cucumber",
+    "iconify_id":"twemoji:cucumber",
+    "set":"Twemoji",
+    "notes":""
+  },
+  {
+    "id":"noto_leafy-green",
+    "label":"Leafy Green (Lettuce)",
+    "iconify_id":"noto:leafy-green",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_carrot",
+    "label":"Carrot",
+    "iconify_id":"noto:carrot",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_ear-of-corn",
+    "label":"Corn",
+    "iconify_id":"noto:ear-of-corn",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_eggplant",
+    "label":"Eggplant",
+    "iconify_id":"noto:eggplant",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_broccoli",
+    "label":"Broccoli",
+    "iconify_id":"noto:broccoli",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_cauliflower",
+    "label":"Cauliflower",
+    "iconify_id":"noto:cauliflower",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_mushroom",
+    "label":"Mushroom",
+    "iconify_id":"noto:mushroom",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_onion",
+    "label":"Onion",
+    "iconify_id":"noto:onion",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_garlic",
+    "label":"Garlic",
+    "iconify_id":"noto:garlic",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_bell-pepper",
+    "label":"Bell Pepper",
+    "iconify_id":"noto:bell-pepper",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_hot-pepper",
+    "label":"Hot Pepper",
+    "iconify_id":"noto:hot-pepper",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_olive",
+    "label":"Olive",
+    "iconify_id":"noto:olive",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_herb",
+    "label":"Herb (Parsley\/Cilantro)",
+    "iconify_id":"noto:herb",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"twemoji_herb",
+    "label":"Basil (Leaf Herb)",
+    "iconify_id":"twemoji:herb",
+    "set":"Twemoji",
+    "notes":""
+  },
+  {
+    "id":"noto_herb",
+    "label":"Mint",
+    "iconify_id":"noto:herb",
+    "set":"Noto Emoji",
+    "notes":"reuse herb for mint"
+  },
+  {
+    "id":"noto_herb",
+    "label":"Dill",
+    "iconify_id":"noto:herb",
+    "set":"Noto Emoji",
+    "notes":"reuse herb for dill"
+  },
+  {
+    "id":"twemoji_radish",
+    "label":"Radish",
+    "iconify_id":"twemoji:radish",
+    "set":"Twemoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_beet",
+    "label":"Beet",
+    "iconify_id":"openmoji:beet",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_cabbage",
+    "label":"Cabbage",
+    "iconify_id":"openmoji:cabbage",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_cabbage",
+    "label":"Red Cabbage",
+    "iconify_id":"openmoji:cabbage",
+    "set":"OpenMoji",
+    "notes":"use color styling"
+  },
+  {
+    "id":"noto_leafy-green",
+    "label":"Spinach",
+    "iconify_id":"noto:leafy-green",
+    "set":"Noto Emoji",
+    "notes":"use leafy green"
+  },
+  {
+    "id":"noto_leafy-green",
+    "label":"Arugula",
+    "iconify_id":"noto:leafy-green",
+    "set":"Noto Emoji",
+    "notes":"use leafy green"
+  },
+  {
+    "id":"noto_leafy-green",
+    "label":"Kale",
+    "iconify_id":"noto:leafy-green",
+    "set":"Noto Emoji",
+    "notes":"use leafy green"
+  },
+  {
+    "id":"noto_peanuts",
+    "label":"Green Peas",
+    "iconify_id":"noto:peanuts",
+    "set":"Noto Emoji",
+    "notes":"placeholder, replace later if needed"
+  },
+  {
+    "id":"noto_peanuts",
+    "label":"Edamame",
+    "iconify_id":"noto:peanuts",
+    "set":"Noto Emoji",
+    "notes":"placeholder for soy\/edamame"
+  },
+  {
+    "id":"twemoji_cucumber",
+    "label":"Pickles",
+    "iconify_id":"twemoji:cucumber",
+    "set":"Twemoji",
+    "notes":"use cucumber"
+  },
+  {
+    "id":"noto_tomato",
+    "label":"Cherry Tomato",
+    "iconify_id":"noto:tomato",
+    "set":"Noto Emoji",
+    "notes":"use tomato"
+  },
+  {
+    "id":"noto_eggplant",
+    "label":"Roasted Eggplant",
+    "iconify_id":"noto:eggplant",
+    "set":"Noto Emoji",
+    "notes":"use eggplant with 'roasted' note"
+  },
+  {
+    "id":"openmoji_sweet-potato",
+    "label":"Sweet Potato",
+    "iconify_id":"openmoji:sweet-potato",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"noto_potato",
+    "label":"Potato",
+    "iconify_id":"noto:potato",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_beet",
+    "label":"Beetroot Cubes",
+    "iconify_id":"openmoji:beet",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_zucchini",
+    "label":"Zucchini",
+    "iconify_id":"openmoji:zucchini",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"noto_onion",
+    "label":"Caramelized Onion",
+    "iconify_id":"noto:onion",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_onion",
+    "label":"Red Onion",
+    "iconify_id":"noto:onion",
+    "set":"Noto Emoji",
+    "notes":"style purple"
+  },
+  {
+    "id":"noto_onion",
+    "label":"Green Onion",
+    "iconify_id":"noto:onion",
+    "set":"Noto Emoji",
+    "notes":"style green"
+  },
+  {
+    "id":"noto_poultry-leg",
+    "label":"Chicken Breast",
+    "iconify_id":"noto:poultry-leg",
+    "set":"Noto Emoji",
+    "notes":"use chicken leg icon"
+  },
+  {
+    "id":"noto_fish",
+    "label":"Tuna",
+    "iconify_id":"noto:fish",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_fish",
+    "label":"Salmon",
+    "iconify_id":"noto:fish",
+    "set":"Noto Emoji",
+    "notes":"style orange"
+  },
+  {
+    "id":"noto_egg",
+    "label":"Hard-Boiled Egg",
+    "iconify_id":"noto:egg",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_cheese-wedge",
+    "label":"Bulgarian Cheese (Feta)",
+    "iconify_id":"noto:cheese-wedge",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_cheese-wedge",
+    "label":"Halloumi",
+    "iconify_id":"noto:cheese-wedge",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"fluent-emoji-flat_tofu",
+    "label":"Tofu",
+    "iconify_id":"fluent-emoji-flat:tofu",
+    "set":"Fluent Emoji Flat",
+    "notes":""
+  },
+  {
+    "id":"openmoji_chickpeas",
+    "label":"Chickpeas",
+    "iconify_id":"openmoji:chickpeas",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_black-beans",
+    "label":"Black Beans",
+    "iconify_id":"openmoji:black-beans",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_lentils",
+    "label":"Green Lentils",
+    "iconify_id":"openmoji:lentils",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_lentils",
+    "label":"Black Lentils",
+    "iconify_id":"openmoji:lentils",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_hummus",
+    "label":"Hummus",
+    "iconify_id":"openmoji:hummus",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_quinoa",
+    "label":"Quinoa",
+    "iconify_id":"openmoji:quinoa",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_bulgur",
+    "label":"Bulgur",
+    "iconify_id":"openmoji:bulgur",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_brown-rice",
+    "label":"Brown Rice",
+    "iconify_id":"openmoji:brown-rice",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"noto_cooked-rice",
+    "label":"White Rice",
+    "iconify_id":"noto:cooked-rice",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_couscous",
+    "label":"Couscous",
+    "iconify_id":"openmoji:couscous",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"noto_spaghetti",
+    "label":"Pasta",
+    "iconify_id":"noto:spaghetti",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_bread",
+    "label":"Croutons",
+    "iconify_id":"noto:bread",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_sunflower-seeds",
+    "label":"Sunflower Seeds",
+    "iconify_id":"openmoji:sunflower-seeds",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_pumpkin-seeds",
+    "label":"Pumpkin Seeds",
+    "iconify_id":"openmoji:pumpkin-seeds",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_sesame",
+    "label":"Sesame Seeds",
+    "iconify_id":"openmoji:sesame",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_walnut",
+    "label":"Walnuts",
+    "iconify_id":"openmoji:walnut",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_almond",
+    "label":"Almonds",
+    "iconify_id":"openmoji:almond",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_cashew",
+    "label":"Cashews",
+    "iconify_id":"openmoji:cashew",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"noto_peanuts",
+    "label":"Peanuts",
+    "iconify_id":"noto:peanuts",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_olive",
+    "label":"Olives (Green)",
+    "iconify_id":"noto:olive",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_olive",
+    "label":"Olives (Black)",
+    "iconify_id":"noto:olive",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_capers",
+    "label":"Capers",
+    "iconify_id":"openmoji:capers",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"noto_lemon",
+    "label":"Pickled Lemon",
+    "iconify_id":"noto:lemon",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_onion",
+    "label":"Fried Onion",
+    "iconify_id":"noto:onion",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_herb",
+    "label":"Parsley",
+    "iconify_id":"noto:herb",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_herb",
+    "label":"Coriander",
+    "iconify_id":"noto:herb",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_balsamic-vinegar",
+    "label":"Balsamic",
+    "iconify_id":"openmoji:balsamic-vinegar",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"noto_garlic",
+    "label":"Garlic & Preserved Lemon",
+    "iconify_id":"noto:garlic",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_lemon",
+    "label":"Citrus Vinaigrette",
+    "iconify_id":"noto:lemon",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_olive",
+    "label":"Olive Oil & Lemon",
+    "iconify_id":"noto:olive",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_tahini",
+    "label":"Tahini",
+    "iconify_id":"openmoji:tahini",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_pesto",
+    "label":"Pesto",
+    "iconify_id":"openmoji:pesto",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_soy-sauce",
+    "label":"Soy Sauce",
+    "iconify_id":"openmoji:soy-sauce",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_caesar-dressing",
+    "label":"Caesar",
+    "iconify_id":"openmoji:caesar-dressing",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_spicy-mayo",
+    "label":"Spicy Mayo",
+    "iconify_id":"openmoji:spicy-mayo",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_harissa",
+    "label":"Harissa",
+    "iconify_id":"openmoji:harissa",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_bottle-of-water",
+    "label":"Water 0.5L",
+    "iconify_id":"openmoji:bottle-of-water",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_sparkling-water",
+    "label":"Sparkling Water",
+    "iconify_id":"openmoji:sparkling-water",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_cola",
+    "label":"Cola",
+    "iconify_id":"openmoji:cola",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_cola-zero",
+    "label":"Cola Zero",
+    "iconify_id":"openmoji:cola-zero",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"noto_beverage-box",
+    "label":"Fresh Juice",
+    "iconify_id":"noto:beverage-box",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"ph_plus-bold",
+    "label":"Add",
+    "iconify_id":"ph:plus-bold",
+    "set":"Phosphor",
+    "notes":""
+  },
+  {
+    "id":"ph_minus-bold",
+    "label":"Remove",
+    "iconify_id":"ph:minus-bold",
+    "set":"Phosphor",
+    "notes":""
+  },
+  {
+    "id":"ph_check-circle-bold",
+    "label":"Confirm\/Success",
+    "iconify_id":"ph:check-circle-bold",
+    "set":"Phosphor",
+    "notes":""
+  },
+  {
+    "id":"ph_x-circle-bold",
+    "label":"Error",
+    "iconify_id":"ph:x-circle-bold",
+    "set":"Phosphor",
+    "notes":""
+  },
+  {
+    "id":"ph_info-bold",
+    "label":"Info",
+    "iconify_id":"ph:info-bold",
+    "set":"Phosphor",
+    "notes":""
+  },
+  {
+    "id":"ph_arrow-left-bold",
+    "label":"Back",
+    "iconify_id":"ph:arrow-left-bold",
+    "set":"Phosphor",
+    "notes":""
+  },
+  {
+    "id":"ph_arrow-right-bold",
+    "label":"Next",
+    "iconify_id":"ph:arrow-right-bold",
+    "set":"Phosphor",
+    "notes":""
+  },
+  {
+    "id":"ph_magnifying-glass-bold",
+    "label":"Search",
+    "iconify_id":"ph:magnifying-glass-bold",
+    "set":"Phosphor",
+    "notes":""
+  },
+  {
+    "id":"ph_sliders-bold",
+    "label":"Filter",
+    "iconify_id":"ph:sliders-bold",
+    "set":"Phosphor",
+    "notes":""
+  },
+  {
+    "id":"ph_clock-bold",
+    "label":"Time\/Slot",
+    "iconify_id":"ph:clock-bold",
+    "set":"Phosphor",
+    "notes":""
+  },
+  {
+    "id":"twemoji_hot-pepper",
+    "label":"Hot\/Spicy",
+    "iconify_id":"twemoji:hot-pepper",
+    "set":"Twemoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_vegan-symbol",
+    "label":"Vegan",
+    "iconify_id":"openmoji:vegan-symbol",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_no-gluten",
+    "label":"Gluten Free",
+    "iconify_id":"openmoji:no-gluten",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_vegetarian-symbol",
+    "label":"Vegetarian",
+    "iconify_id":"openmoji:vegetarian-symbol",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_nut-allergy",
+    "label":"Nut Warning",
+    "iconify_id":"openmoji:nut-allergy",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"noto_glass-of-milk",
+    "label":"Milk\/Dairy",
+    "iconify_id":"noto:glass-of-milk",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_egg",
+    "label":"Egg Allergen",
+    "iconify_id":"noto:egg",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_fish",
+    "label":"Fish Allergen",
+    "iconify_id":"noto:fish",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_halal",
+    "label":"Halal",
+    "iconify_id":"openmoji:halal",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_kosher",
+    "label":"Kosher",
+    "iconify_id":"openmoji:kosher",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"ph_shopping-cart-bold",
+    "label":"Cart",
+    "iconify_id":"ph:shopping-cart-bold",
+    "set":"Phosphor",
+    "notes":""
+  },
+  {
+    "id":"ph_credit-card-bold",
+    "label":"Pay",
+    "iconify_id":"ph:credit-card-bold",
+    "set":"Phosphor",
+    "notes":""
+  },
+  {
+    "id":"logos_whatsapp-icon",
+    "label":"WhatsApp",
+    "iconify_id":"logos:whatsapp-icon",
+    "set":"Iconify Logos",
+    "notes":""
+  },
+  {
+    "id":"ph_share-network-bold",
+    "label":"Share",
+    "iconify_id":"ph:share-network-bold",
+    "set":"Phosphor",
+    "notes":""
+  },
+  {
+    "id":"ph_house-bold",
+    "label":"Home",
+    "iconify_id":"ph:house-bold",
+    "set":"Phosphor",
+    "notes":""
+  },
+  {
+    "id":"ph_star-bold",
+    "label":"Favorite",
+    "iconify_id":"ph:star-bold",
+    "set":"Phosphor",
+    "notes":""
+  },
+  {
+    "id":"ph_recycle-bold",
+    "label":"Recycle",
+    "iconify_id":"ph:recycle-bold",
+    "set":"Phosphor",
+    "notes":""
+  },
+  {
+    "id":"ph_map-pin-bold",
+    "label":"Map\/Location",
+    "iconify_id":"ph:map-pin-bold",
+    "set":"Phosphor",
+    "notes":""
+  },
+  {
+    "id":"ph_hand-arrow-up-bold",
+    "label":"Pickup",
+    "iconify_id":"ph:hand-arrow-up-bold",
+    "set":"Phosphor",
+    "notes":""
+  },
+  {
+    "id":"ph_fork-knife-bold",
+    "label":"Kitchen",
+    "iconify_id":"ph:fork-knife-bold",
+    "set":"Phosphor",
+    "notes":""
+  },
+  {
+    "id":"ph_printer-bold",
+    "label":"Print",
+    "iconify_id":"ph:printer-bold",
+    "set":"Phosphor",
+    "notes":""
+  },
+  {
+    "id":"twemoji_tomato",
+    "label":"Cherry Tomatoes (variant)",
+    "iconify_id":"twemoji:tomato",
+    "set":"Twemoji",
+    "notes":""
+  },
+  {
+    "id":"twemoji_tomato",
+    "label":"Grape Tomatoes",
+    "iconify_id":"twemoji:tomato",
+    "set":"Twemoji",
+    "notes":""
+  },
+  {
+    "id":"twemoji_cucumber",
+    "label":"Cucumber Slices",
+    "iconify_id":"twemoji:cucumber",
+    "set":"Twemoji",
+    "notes":""
+  },
+  {
+    "id":"noto_leafy-green",
+    "label":"Mixed Greens",
+    "iconify_id":"noto:leafy-green",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_leafy-green",
+    "label":"Romaine Lettuce",
+    "iconify_id":"noto:leafy-green",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_leafy-green",
+    "label":"Iceberg Lettuce",
+    "iconify_id":"noto:leafy-green",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_leafy-green",
+    "label":"Arugula (Rocket)",
+    "iconify_id":"noto:leafy-green",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_leafy-green",
+    "label":"Spinach Leaves",
+    "iconify_id":"noto:leafy-green",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_olive",
+    "label":"Kalamata Olives",
+    "iconify_id":"noto:olive",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_olive",
+    "label":"Green Olives Sliced",
+    "iconify_id":"noto:olive",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_olive",
+    "label":"Black Olives Sliced",
+    "iconify_id":"noto:olive",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_bell-pepper",
+    "label":"Roasted Peppers",
+    "iconify_id":"noto:bell-pepper",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_bell-pepper",
+    "label":"Red Peppers",
+    "iconify_id":"noto:bell-pepper",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_bell-pepper",
+    "label":"Yellow Peppers",
+    "iconify_id":"noto:bell-pepper",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_bell-pepper",
+    "label":"Orange Peppers",
+    "iconify_id":"noto:bell-pepper",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_carrot",
+    "label":"Grated Carrot",
+    "iconify_id":"noto:carrot",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_cabbage",
+    "label":"Shredded Cabbage",
+    "iconify_id":"openmoji:cabbage",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_cabbage",
+    "label":"Coleslaw Mix",
+    "iconify_id":"openmoji:cabbage",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_beet",
+    "label":"Beet Slices",
+    "iconify_id":"openmoji:beet",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"twemoji_radish",
+    "label":"Radish Slices",
+    "iconify_id":"twemoji:radish",
+    "set":"Twemoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_green-beans",
+    "label":"Green Beans",
+    "iconify_id":"openmoji:green-beans",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"twemoji_hot-pepper",
+    "label":"Chili Flakes",
+    "iconify_id":"twemoji:hot-pepper",
+    "set":"Twemoji",
+    "notes":""
+  },
+  {
+    "id":"noto_lemon",
+    "label":"Lemon Wedge",
+    "iconify_id":"noto:lemon",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_lime",
+    "label":"Lime",
+    "iconify_id":"openmoji:lime",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_vinegar",
+    "label":"Vinegar Bottle",
+    "iconify_id":"openmoji:vinegar",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_olive-oil",
+    "label":"Olive Oil Bottle",
+    "iconify_id":"openmoji:olive-oil",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"noto_honey-pot",
+    "label":"Honey",
+    "iconify_id":"noto:honey-pot",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_mustard",
+    "label":"Mustard",
+    "iconify_id":"openmoji:mustard",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_ketchup",
+    "label":"Ketchup",
+    "iconify_id":"openmoji:ketchup",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_mayonnaise",
+    "label":"Mayo",
+    "iconify_id":"openmoji:mayonnaise",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_bbq-sauce",
+    "label":"BBQ Sauce",
+    "iconify_id":"openmoji:bbq-sauce",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_yogurt",
+    "label":"Yogurt",
+    "iconify_id":"openmoji:yogurt",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_yogurt",
+    "label":"Greek Yogurt",
+    "iconify_id":"openmoji:yogurt",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_labneh",
+    "label":"Labneh",
+    "iconify_id":"openmoji:labneh",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"noto_cheese-wedge",
+    "label":"Feta Crumbles",
+    "iconify_id":"noto:cheese-wedge",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_cheese-wedge",
+    "label":"Mozzarella",
+    "iconify_id":"noto:cheese-wedge",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_cheese-wedge",
+    "label":"Parmesan",
+    "iconify_id":"noto:cheese-wedge",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_tortilla",
+    "label":"Tortilla",
+    "iconify_id":"openmoji:tortilla",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_pita",
+    "label":"Pita",
+    "iconify_id":"openmoji:pita",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_wrap",
+    "label":"Wrap",
+    "iconify_id":"openmoji:wrap",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_falafel",
+    "label":"Falafel",
+    "iconify_id":"openmoji:falafel",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_shawarma",
+    "label":"Shawarma Chicken",
+    "iconify_id":"openmoji:shawarma",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_turkey-meat",
+    "label":"Turkey",
+    "iconify_id":"openmoji:turkey-meat",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_roast-beef",
+    "label":"Roast Beef",
+    "iconify_id":"openmoji:roast-beef",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_tuna-salad",
+    "label":"Tuna Salad",
+    "iconify_id":"openmoji:tuna-salad",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_pasta-salad",
+    "label":"Pasta Salad",
+    "iconify_id":"openmoji:pasta-salad",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_egg-salad",
+    "label":"Egg Salad",
+    "iconify_id":"openmoji:egg-salad",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_potato-salad",
+    "label":"Potato Salad",
+    "iconify_id":"openmoji:potato-salad",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_caprese-salad",
+    "label":"Caprese",
+    "iconify_id":"openmoji:caprese-salad",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_greek-salad",
+    "label":"Greek Salad",
+    "iconify_id":"openmoji:greek-salad",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_nicoise-salad",
+    "label":"Nicoise Salad",
+    "iconify_id":"openmoji:nicoise-salad",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_caesar-salad",
+    "label":"Caesar Salad",
+    "iconify_id":"openmoji:caesar-salad",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"noto_bread",
+    "label":"Croutons (variant)",
+    "iconify_id":"noto:bread",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_seedling",
+    "label":"Seeds Mix",
+    "iconify_id":"openmoji:seedling",
+    "set":"OpenMoji",
+    "notes":"generic seed icon"
+  },
+  {
+    "id":"openmoji_peanut",
+    "label":"Toasted Nuts",
+    "iconify_id":"openmoji:peanut",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_almond",
+    "label":"Sliced Almonds",
+    "iconify_id":"openmoji:almond",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_walnut",
+    "label":"Walnut Pieces",
+    "iconify_id":"openmoji:walnut",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_pine-nut",
+    "label":"Pine Nuts",
+    "iconify_id":"openmoji:pine-nut",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"twemoji_tomato",
+    "label":"Sun-Dried Tomatoes",
+    "iconify_id":"twemoji:tomato",
+    "set":"Twemoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_artichoke",
+    "label":"Artichoke",
+    "iconify_id":"openmoji:artichoke",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_hearts-of-palm",
+    "label":"Hearts of Palm",
+    "iconify_id":"openmoji:hearts-of-palm",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_capers",
+    "label":"Caper Berries",
+    "iconify_id":"openmoji:capers",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_anchovy",
+    "label":"Anchovy",
+    "iconify_id":"openmoji:anchovy",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_salmon",
+    "label":"Smoked Salmon",
+    "iconify_id":"openmoji:salmon",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_tzatziki",
+    "label":"Tzatziki",
+    "iconify_id":"openmoji:tzatziki",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_sour-cream",
+    "label":"Sour Cream",
+    "iconify_id":"openmoji:sour-cream",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"noto_onion",
+    "label":"Pickled Onion",
+    "iconify_id":"noto:onion",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_garlic",
+    "label":"Roasted Garlic",
+    "iconify_id":"noto:garlic",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"twemoji_hot-pepper",
+    "label":"Green Chili",
+    "iconify_id":"twemoji:hot-pepper",
+    "set":"Twemoji",
+    "notes":""
+  },
+  {
+    "id":"noto_ear-of-corn",
+    "label":"Yellow Corn",
+    "iconify_id":"noto:ear-of-corn",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_cheese-wedge",
+    "label":"White Cheese",
+    "iconify_id":"noto:cheese-wedge",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_blue-cheese",
+    "label":"Blue Cheese",
+    "iconify_id":"openmoji:blue-cheese",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_goat-cheese",
+    "label":"Goat Cheese",
+    "iconify_id":"openmoji:goat-cheese",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_ricotta",
+    "label":"Ricotta",
+    "iconify_id":"openmoji:ricotta",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_cottage-cheese",
+    "label":"Cottage Cheese",
+    "iconify_id":"openmoji:cottage-cheese",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_tahini",
+    "label":"Tahini-Green",
+    "iconify_id":"openmoji:tahini",
+    "set":"OpenMoji",
+    "notes":"style green"
+  },
+  {
+    "id":"openmoji_pomegranate",
+    "label":"Pomegranate Seeds",
+    "iconify_id":"openmoji:pomegranate",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"noto_red-apple",
+    "label":"Apple Slices",
+    "iconify_id":"noto:red-apple",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_pear",
+    "label":"Pear Slices",
+    "iconify_id":"noto:pear",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"noto_grapes",
+    "label":"Grapes",
+    "iconify_id":"noto:grapes",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_cranberries",
+    "label":"Cranberries (dried)",
+    "iconify_id":"openmoji:cranberries",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_raisins",
+    "label":"Raisins",
+    "iconify_id":"openmoji:raisins",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_dates",
+    "label":"Dates",
+    "iconify_id":"openmoji:dates",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_fig",
+    "label":"Fig",
+    "iconify_id":"openmoji:fig",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"noto_tangerine",
+    "label":"Orange Segments",
+    "iconify_id":"noto:tangerine",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_grapefruit",
+    "label":"Grapefruit",
+    "iconify_id":"openmoji:grapefruit",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_orange",
+    "label":"Blood Orange",
+    "iconify_id":"openmoji:orange",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"noto_lemon",
+    "label":"Lemon Zest",
+    "iconify_id":"noto:lemon",
+    "set":"Noto Emoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_lime",
+    "label":"Lime Zest",
+    "iconify_id":"openmoji:lime",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_vegan-symbol",
+    "label":"Vegan Label",
+    "iconify_id":"openmoji:vegan-symbol",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_no-gluten",
+    "label":"Gluten Free Label",
+    "iconify_id":"openmoji:no-gluten",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"twemoji_hot-pepper",
+    "label":"Spicy Label",
+    "iconify_id":"twemoji:hot-pepper",
+    "set":"Twemoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_halal",
+    "label":"Halal Label",
+    "iconify_id":"openmoji:halal",
+    "set":"OpenMoji",
+    "notes":""
+  },
+  {
+    "id":"openmoji_kosher",
+    "label":"Kosher Label",
+    "iconify_id":"openmoji:kosher",
+    "set":"OpenMoji",
+    "notes":""
+  }
+]
