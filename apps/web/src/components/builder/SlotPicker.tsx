@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { format, addMinutes, startOfDay, isToday, isTomorrow } from 'date-fns';
-import { he } from 'date-fns/locale';
+import { he } from 'date-fns/locale/he';
 import { Button } from '@/components/ui/button';
 import { LoadingSkeleton } from '@/components/ui/LoadingSkeleton';
 import { cn } from '@/lib/utils';
