@@ -9,6 +9,7 @@ import { useSaladStore } from '@/lib/store'
 import { useAuthStore } from '@/lib/auth'
 import { sounds } from '@/lib/sounds'
 import { haptics } from '@/lib/haptics'
+import { DynamicBackground } from '@/components/ui/DynamicBackground'
 
 function HomeContent() {
   const searchParams = useSearchParams()
@@ -48,24 +49,8 @@ function HomeContent() {
   }
 
   return (
-    <div className="min-h-screen overflow-x-hidden">
-      {/* Parallax Background */}
-      <motion.div
-        className="fixed inset-0 z-0"
-        style={{ y: backgroundY }}
-      >
-        <Image
-          src="/graphics/new/long bg salad.png"
-          alt="Salad Background"
-          fill
-          className="object-cover object-center"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-cream/80 via-cream/60 to-cream/90" />
-      </motion.div>
-
-      {/* Main Content */}
-      <div className="relative z-10 min-h-screen flex flex-col">
+    <DynamicBackground theme="home">
+      <div className="relative z-10 min-h-screen flex flex-col overflow-x-hidden">
         {/* Hero Section */}
         <motion.section
           ref={heroRef}
@@ -249,7 +234,7 @@ function HomeContent() {
           </motion.div>
         </motion.div>
       </div>
-    </div>
+    </DynamicBackground>
   )
 }
 
