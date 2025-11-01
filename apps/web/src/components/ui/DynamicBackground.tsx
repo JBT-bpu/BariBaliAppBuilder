@@ -43,29 +43,30 @@ export function DynamicBackground({
     // Animation class
     const animationClass = backgroundAnimations[config.animation || 'none']
 
+    // Get CSS classes for responsive backgrounds
+    const getBackgroundClasses = () => {
+        const baseClasses = `fixed inset-0 -z-10 ${animationClass} ${className}`
+
+        if (config.type === 'image') {
+            const responsiveClass = 'bg-responsive'
+            const parallaxClass = config.parallax ? 'bg-parallax' : ''
+            return `${baseClasses} ${responsiveClass} ${parallaxClass}`
+        }
+
+        return baseClasses
+    }
+
     return (
         <>
             {/* Background Layer */}
             {config.type === 'image' ? (
                 <motion.div
-                    className={`fixed inset-0 -z-10 ${animationClass} ${className}`}
+                    className={getBackgroundClasses()}
+                    style={config.parallax ? { y: parallaxY } : {}}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8 }}
-                    {...(config.parallax ? { style: { y: parallaxY } } : {})}
-                >
-                    <Image
-                        src={config.value}
-                        alt="Background"
-                        fill
-                        className="object-cover"
-                        style={{
-                            filter: 'contrast(1.05) saturate(1.1) brightness(1.02)'
-                        }}
-                        priority={selectedTheme === 'home'}
-                        sizes="(max-width: 768px) 1200px, (max-width: 1200px) 1920px, 1920px"
-                    />
-                </motion.div>
+                />
             ) : (
                 <motion.div
                     className={`fixed inset-0 -z-10 ${animationClass} ${className}`}

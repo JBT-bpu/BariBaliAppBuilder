@@ -425,4 +425,59 @@
       min-width: 44px;
     }
   }
+
+  /* Responsive Background Images */
+  /* Mobile First - Portrait */
+  .bg-responsive {
+    background-image: url('/graphics/new/1200x1920.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    filter: contrast(1.05) saturate(1.1) brightness(1.02);
+  }
+
+  /* Tablet - Landscape */
+  @media (min-width: 768px) {
+    .bg-responsive {
+      background-image: url('/graphics/new/1200x800.png');
+    }
+  }
+
+  /* Desktop - Full HD */
+  @media (min-width: 1200px) {
+    .bg-responsive {
+      background-image: url('/graphics/new/1920x1080.png');
+    }
+  }
+
+  /* High DPI displays */
+  @media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 1200px) and (min-resolution: 192dpi) {
+    .bg-responsive {
+      background-image: url('/graphics/new/1920x1080.png');
+      /* Could add @2x images here if available */
+    }
+  }
+
+  /* Fixed attachment for parallax themes */
+  .bg-parallax {
+    background-attachment: fixed;
+  }
+
+  /* Animation classes for background themes */
+  .bg-pulse {
+    animation: bgPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes bgPulse {
+
+    0%,
+    100% {
+      filter: contrast(1.05) saturate(1.1) brightness(1.02);
+    }
+
+    50% {
+      filter: contrast(1.08) saturate(1.15) brightness(1.05);
+    }
+  }
 }
