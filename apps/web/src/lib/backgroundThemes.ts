@@ -26,10 +26,10 @@ export interface BackgroundStyle {
 
 // Comprehensive theme definitions with image backgrounds
 export const backgroundThemes: Record<BackgroundTheme, BackgroundConfig> = {
-    // Page-specific themes
+    // Page-specific themes - Optimized for quality and responsive design
     home: {
         type: 'image',
-        value: '/graphics/new/1920x1080.png',
+        value: '/graphics/new/1920x1080.png', // Max quality for desktop
         overlay: 'rgba(0, 0, 0, 0.03)', // Ultra-subtle dark tint
         parallax: false, // Remove parallax for cleaner look
         animation: 'none'
@@ -37,7 +37,7 @@ export const backgroundThemes: Record<BackgroundTheme, BackgroundConfig> = {
 
     builder: {
         type: 'image',
-        value: '/graphics/new/1200x800.png',
+        value: '/graphics/new/1200x1920.png', // Best mobile aspect ratio
         overlay: 'rgba(240, 253, 244, 0.4)',
         parallax: false,
         animation: 'none'
@@ -45,7 +45,7 @@ export const backgroundThemes: Record<BackgroundTheme, BackgroundConfig> = {
 
     checkout: {
         type: 'image',
-        value: '/graphics/new/1200x800.png',
+        value: '/graphics/new/1200x1920.png', // Best mobile aspect ratio
         overlay: 'rgba(254, 243, 199, 0.3)',
         parallax: false,
         animation: 'none'
@@ -53,7 +53,7 @@ export const backgroundThemes: Record<BackgroundTheme, BackgroundConfig> = {
 
     success: {
         type: 'image',
-        value: '/graphics/new/1920x1080.png',
+        value: '/graphics/new/1920x1080.png', // Hero quality for celebration
         overlay: 'rgba(236, 253, 245, 0.4)',
         parallax: false,
         animation: 'dynamic'
@@ -61,7 +61,7 @@ export const backgroundThemes: Record<BackgroundTheme, BackgroundConfig> = {
 
     profile: {
         type: 'image',
-        value: '/graphics/new/1200x800.png',
+        value: '/graphics/new/1200x1920.png', // Mobile-optimized
         overlay: 'rgba(243, 244, 246, 0.5)',
         parallax: false,
         animation: 'none'

@@ -63,7 +63,7 @@ export function DynamicBackground({
                             filter: 'contrast(1.05) saturate(1.1) brightness(1.02)'
                         }}
                         priority={selectedTheme === 'home'}
-                        sizes="100vw"
+                        sizes="(max-width: 768px) 1200px, (max-width: 1200px) 1920px, 1920px"
                     />
                 </motion.div>
             ) : (
