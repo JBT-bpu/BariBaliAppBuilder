@@ -426,37 +426,76 @@
     }
   }
 
-  /* Responsive Background Images */
-  /* Mobile First - Portrait */
+  /* Responsive Background Images - Mobile First with Fallbacks */
   .bg-responsive {
-    background-image: url('/graphics/new/1200x1920.png');
+    /* Primary mobile image with fallbacks */
+    background-image:
+      url('/graphics/new/1200x1920.png'),
+      url('/graphics/new/1200x1600.png'),
+      url('/graphics/new/800x1200.png');
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
+    background-repeat: no-repeat;
     filter: contrast(1.05) saturate(1.1) brightness(1.02);
   }
 
-  /* Tablet - Landscape */
-  @media (min-width: 768px) {
+  /* Small mobile devices (phones in portrait) */
+  @media (max-width: 480px) {
     .bg-responsive {
-      background-image: url('/graphics/new/1200x800.png');
+      background-image:
+        url('/graphics/new/1200x1920.png'),
+        url('/graphics/new/800x1200.png'),
+        url('/graphics/new/1200x1600.png');
+    }
+  }
+
+  /* Medium mobile devices (larger phones) */
+  @media (min-width: 481px) and (max-width: 767px) {
+    .bg-responsive {
+      background-image:
+        url('/graphics/new/1200x1920.png'),
+        url('/graphics/new/1200x1600.png'),
+        url('/graphics/new/800x1200.png');
+    }
+  }
+
+  /* Tablet - Landscape */
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .bg-responsive {
+      background-image:
+        url('/graphics/new/1200x800.png'),
+        url('/graphics/new/1200x1600.png'),
+        url('/graphics/new/1200x1920.png');
     }
   }
 
   /* Desktop - Full HD */
   @media (min-width: 1200px) {
     .bg-responsive {
-      background-image: url('/graphics/new/1920x1080.png');
+      background-image:
+        url('/graphics/new/1920x1080.png'),
+        url('/graphics/new/1200x800.png'),
+        url('/graphics/new/1200x1600.png');
     }
   }
 
-  /* High DPI displays */
+  /* High DPI displays - ensure crisp images */
   @media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2),
   (min-width: 1200px) and (min-resolution: 192dpi) {
     .bg-responsive {
-      background-image: url('/graphics/new/1920x1080.png');
-      /* Could add @2x images here if available */
+      background-image:
+        url('/graphics/new/1920x1080.png'),
+        url('/graphics/new/1200x800.png');
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: pixelated;
     }
+  }
+
+  /* Ensure background always covers viewport */
+  .bg-responsive {
+    min-height: 100vh;
+    min-width: 100vw;
   }
 
   /* Fixed attachment for parallax themes */
