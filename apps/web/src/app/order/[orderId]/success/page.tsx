@@ -5,6 +5,7 @@ import { useParams, useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { LoadingSkeleton } from '@/components/ui/LoadingSkeleton';
 import { ErrorBoundary } from '@/components/ui/ErrorBoundary';
+import { ConfettiSimple } from '@/components/ui/Confetti';
 import { useSaladStore } from '@/lib/store';
 import { getMockOrderById } from '@/lib/testOrderSimulation';
 import { cn } from '@/lib/utils';
@@ -192,6 +193,9 @@ ${orderDetails.items.paid_additions.map(item => `• ${item}`).join('\n')}
 
     return (
         <div className="min-h-screen bg-bg">
+            {/* Confetti Celebration */}
+            <ConfettiSimple isActive={!loading && !error && !!orderDetails} />
+
             <div className="max-w-md mx-auto p-6">
                 {/* Success Header */}
                 <div className="text-center mb-8">
