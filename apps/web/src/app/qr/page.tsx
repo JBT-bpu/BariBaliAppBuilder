@@ -10,29 +10,37 @@ export default function QRPage() {
     const [copied, setCopied] = useState(false)
 
     useEffect(() => {
-        // Get local IP from window location
-        const hostname = window.location.hostname
-        const port = window.location.port || '3000'
+        // Get the current URL and generate QR for the home page
+        const currentUrl = window.location.origin
+        setQrUrl(currentUrl)
 
-        // If accessing from localhost, show instructions
-        if (hostname === 'localhost' || hostname === '127.0.0.1') {
-            setLocalIP('localhost')
-            setQrUrl(`http://localhost:${port}`)
-        } else {
-            // Already on network IP
-            setLocalIP(hostname)
-            setQrUrl(`http://${hostname}:${port}`)
-        }
+        // Check if we're on localhost
+        const hostname = window.location.hostname
+        setLocalIP(hostname === 'localhost' || hostname === '127.0.0.1' ? 'localhost' : hostname)
     }, [])
 
     const downloadQR = () => {
-        const qrElement = document.querySelector('canvas')
-        if (qrElement) {
-            const url = qrElement.toDataURL('image/png')
-            const link = document.createElement('a')
-            link.href = url
-            link.download = 'baribali-qr-code.png'
-            link.click()
+        // QRCodeSVG generates an SVG, so we need to convert it to PNG
+        const svgElement = document.querySelector('svg')
+        if (svgElement) {
+            // Create a canvas to draw the SVG
+            const canvas = document.createElement('canvas')
+            const ctx = canvas.getContext('2d')
+            const svgData = new XMLSerializer().serializeToString(svgElement)
+            const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' })
+
+            const img = new Image()
+            img.onload = () => {
+                canvas.width = 512 // Higher resolution for download
+                canvas.height = 512
+                ctx?.drawImage(img, 0, 0, 512, 512)
+                const pngUrl = canvas.toDataURL('image/png')
+                const link = document.createElement('a')
+                link.href = pngUrl
+                link.download = 'baribali-qr-code.png'
+                link.click()
+            }
+            img.src = URL.createObjectURL(svgBlob)
         }
     }
 
