@@ -54,7 +54,7 @@ function HomeContent() {
         {/* Hero Section */}
         <motion.section
           ref={heroRef}
-          className="flex-1 flex flex-col items-center justify-center px-4 py-20"
+          className="flex-1 flex flex-col items-center justify-center px-4 py-8 md:py-20"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -65,7 +65,7 @@ function HomeContent() {
           >
             {/* Large Logo */}
             <motion.div
-              className="mb-12"
+              className="mb-6 md:mb-12"
               initial={{ scale: 0.8, opacity: 0, y: -30 }}
               animate={isHeroInView ? { scale: 1, opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -76,21 +76,21 @@ function HomeContent() {
                 width={600}
                 height={200}
                 priority
-                className="w-full h-auto max-w-md mx-auto drop-shadow-2xl"
+                className="w-full h-auto max-w-sm md:max-w-md mx-auto drop-shadow-2xl"
               />
             </motion.div>
 
             {/* Tagline */}
             <motion.div
-              className="mb-16"
+              className="mb-8 md:mb-16"
               initial={{ opacity: 0, y: 30 }}
               animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <h1 className="text-3xl md:text-4xl font-bold text-slate mb-4 drop-shadow-lg">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate mb-2 md:mb-4 drop-shadow-lg">
                 בנה את הסלט המושלם שלך 🥗
               </h1>
-              <p className="text-lg md:text-xl text-slate/80 drop-shadow">
+              <p className="text-base md:text-lg lg:text-xl text-slate/80 drop-shadow">
                 טרי, מותאם אישית ומוכן תוך דקות
               </p>
             </motion.div>
@@ -100,13 +100,13 @@ function HomeContent() {
         {/* Buttons Section */}
         <motion.section
           ref={buttonsRef}
-          className="pb-20 px-4"
+          className="pb-8 md:pb-20 px-4"
           initial={{ opacity: 0, y: 50 }}
           animate={isButtonsInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <div className="max-w-md mx-auto">
-            <div className="grid grid-cols-1 gap-6">
+            <div className="grid grid-cols-1 gap-3 md:gap-6">
               {/* Build Salad Button - Always visible */}
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -201,12 +201,12 @@ function HomeContent() {
             {/* Auth prompt if not authenticated */}
             {!isAuthenticated() && (
               <motion.div
-                className="mt-12 text-center"
+                className="mt-6 md:mt-12 text-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isButtonsInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 1 }}
               >
-                <p className="text-sm text-slate/70 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-2xl border border-white/30 shadow-lg">
+                <p className="text-sm text-slate/70 bg-white/60 backdrop-blur-sm px-4 md:px-6 py-2 md:py-3 rounded-2xl border border-white/30 shadow-lg">
                   התחבר כדי לשמור סלטים ולקבל המלצות אישיות
                 </p>
               </motion.div>
