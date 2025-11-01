@@ -59,6 +59,9 @@ export function DynamicBackground({
                         alt="Background"
                         fill
                         className="object-cover"
+                        style={{
+                            filter: 'contrast(1.05) saturate(1.1) brightness(1.02)'
+                        }}
                         priority={selectedTheme === 'home'}
                         sizes="100vw"
                     />

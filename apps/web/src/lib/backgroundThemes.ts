@@ -30,9 +30,9 @@ export const backgroundThemes: Record<BackgroundTheme, BackgroundConfig> = {
     home: {
         type: 'image',
         value: '/graphics/new/1920x1080.png',
-        overlay: 'rgba(254, 247, 230, 0.3)',
-        parallax: true,
-        animation: 'subtle'
+        overlay: 'rgba(0, 0, 0, 0.03)', // Ultra-subtle dark tint
+        parallax: false, // Remove parallax for cleaner look
+        animation: 'none'
     },
 
     builder: {
