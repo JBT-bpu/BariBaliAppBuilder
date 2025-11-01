@@ -24,50 +24,50 @@ export interface BackgroundStyle {
     animation?: string
 }
 
-// Comprehensive theme definitions
+// Comprehensive theme definitions with image backgrounds
 export const backgroundThemes: Record<BackgroundTheme, BackgroundConfig> = {
     // Page-specific themes
     home: {
-        type: 'gradient',
-        value: 'linear-gradient(135deg, #FEF7E6 0%, #FCD34D 25%, #10B981 50%, #5AC568 75%, #FEF7E6 100%)',
+        type: 'image',
+        value: '/graphics/new/1920x1080.png',
         overlay: 'rgba(254, 247, 230, 0.3)',
         parallax: true,
         animation: 'subtle'
     },
 
     builder: {
-        type: 'gradient',
-        value: 'linear-gradient(135deg, #F0FDF4 0%, #D1FAE5 25%, #A7F3D0 50%, #6EE7B7 75%, #10B981 100%)',
+        type: 'image',
+        value: '/graphics/new/1200x800.png',
         overlay: 'rgba(240, 253, 244, 0.4)',
         parallax: false,
         animation: 'none'
     },
 
     checkout: {
-        type: 'gradient',
-        value: 'linear-gradient(135deg, #FEF3C7 0%, #FDE68A 25%, #FCD34D 50%, #F59E0B 75%, #D97706 100%)',
+        type: 'image',
+        value: '/graphics/new/1200x800.png',
         overlay: 'rgba(254, 243, 199, 0.3)',
         parallax: false,
         animation: 'none'
     },
 
     success: {
-        type: 'gradient',
-        value: 'linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 25%, #A7F3D0 50%, #6EE7B7 75%, #10B981 100%)',
+        type: 'image',
+        value: '/graphics/new/1920x1080.png',
         overlay: 'rgba(236, 253, 245, 0.4)',
         parallax: false,
         animation: 'dynamic'
     },
 
     profile: {
-        type: 'gradient',
-        value: 'linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 25%, #D1D5DB 50%, #9CA3AF 75%, #6B7280 100%)',
+        type: 'image',
+        value: '/graphics/new/1200x800.png',
         overlay: 'rgba(243, 244, 246, 0.5)',
         parallax: false,
         animation: 'none'
     },
 
-    // Ingredient category themes
+    // Ingredient category themes - using gradients as fallbacks until specific images are created
     veggies: {
         type: 'gradient',
         value: 'linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 25%, #BBF7D0 50%, #86EFAC 75%, #4ADE80 100%)',
@@ -108,7 +108,7 @@ export const backgroundThemes: Record<BackgroundTheme, BackgroundConfig> = {
         animation: 'dynamic'
     },
 
-    // Seasonal themes
+    // Seasonal themes - using gradients as fallbacks until specific images are created
     summer: {
         type: 'gradient',
         value: 'linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 25%, #A7F3D0 50%, #6EE7B7 75%, #10B981 100%)',

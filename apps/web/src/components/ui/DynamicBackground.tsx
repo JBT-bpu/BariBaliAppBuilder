@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { usePathname } from 'next/navigation'
+import Image from 'next/image'
 import { useMemo } from 'react'
 import {
     BackgroundTheme,
@@ -45,16 +46,35 @@ export function DynamicBackground({
     return (
         <>
             {/* Background Layer */}
-            <motion.div
-                className={`fixed inset-0 -z-10 ${animationClass} ${className}`}
-                style={{
-                    background: config.value,
-                    ...(config.parallax ? { y: parallaxY } : {})
-                }}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8 }}
-            />
+            {config.type === 'image' ? (
+                <motion.div
+                    className={`fixed inset-0 -z-10 ${animationClass} ${className}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.8 }}
+                    {...(config.parallax ? { style: { y: parallaxY } } : {})}
+                >
+                    <Image
+                        src={config.value}
+                        alt="Background"
+                        fill
+                        className="object-cover"
+                        priority={selectedTheme === 'home'}
+                        sizes="100vw"
+                    />
+                </motion.div>
+            ) : (
+                <motion.div
+                    className={`fixed inset-0 -z-10 ${animationClass} ${className}`}
+                    style={{
+                        background: config.value,
+                        ...(config.parallax ? { y: parallaxY } : {})
+                    }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.8 }}
+                />
+            )}
 
             {/* Overlay Layer */}
             {config.overlay && (
